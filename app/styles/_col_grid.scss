@@ -1,0 +1,187 @@
+
+$tot-width: 100%;
+$num-col: 15;
+$gut-width: 2%;
+
+$ind-col-width: ($tot-width - ($gut-width * ($num-col - 1))) / $num-col;
+
+@mixin grid($element_width){
+  width: ($element_width * $ind-col-width) + ($gut-width *($element_width - 1 ));
+}
+
+
+
+.col_sm_1, .col_sm_2, .col_sm_3, .col_sm_4, .col_sm_5, .col_sm_6, 
+.col_sm_7, .col_sm_8, .col_sm_9, .col_sm_10, .col_sm_11, .col_sm_12, 
+.col_sm_13, .col_sm_14, .col_sm_15{
+  width: 100%;
+  margin-right: $gut-width;
+  box-sizing: border-box;
+}
+  
+
+
+@media (min-width: 500px){
+  
+  .col_md_1{
+    @include grid(1);
+    margin-right: $gut-width;
+  }
+
+  .col_md_2{
+    @include grid(2);
+    margin-right: $gut-width;
+  }
+
+  .col_md_3{
+    @include grid(3);
+    margin-right: $gut-width;
+  }
+
+  .col_md_4{
+    @include grid(4);
+    margin-right: $gut-width;
+  }
+
+  .col_md_5{
+    @include grid(5);
+    margin-right: $gut-width;
+  }
+
+  .col_md_6{
+    @include grid(6);
+    margin-right: $gut-width;
+  }
+
+  .col_md_7{
+    @include grid(7);
+    margin-right: $gut-width;
+  }
+
+  .col_md_8{
+    @include grid(8);
+    margin-right: $gut-width;
+  }
+
+  .col_md_9{
+    @include grid(9);
+    margin-right: $gut-width;
+  }
+
+  .col_md_10{
+    @include grid(10);
+    margin-right: $gut-width;
+  }
+
+  .col_md_11{
+    @include grid(11);
+    margin-right: $gut-width;
+  }
+
+  .col_md_12{
+    @include grid(12);
+    margin-right: $gut-width;
+  }
+
+  .col_md_13{
+    @include grid(13);
+    margin-right: $gut-width;
+  }
+
+  .col_md_14{
+    @include grid(14);
+    margin-right: $gut-width;
+  }
+
+  .col_md_15{
+    @include grid(15);
+    margin-right: $gut-width;
+  }
+  
+}
+
+
+
+
+
+@media (min-width: 860px){
+  
+  .col_lg_1{
+    @include grid(1);
+    margin-right: $gut-width;
+  }
+
+  .col_lg_2{
+    @include grid(2);
+    margin-right: $gut-width;
+  }
+
+  .col_lg_3{
+    @include grid(3);
+    margin-right: $gut-width;
+  }
+
+  .col_lg_4{
+    @include grid(4);
+    margin-right: $gut-width;
+  }
+
+  .col_lg_5{
+    @include grid(5);
+    margin-right: $gut-width;
+  }
+
+  .col_lg_6{
+    @include grid(6);
+    margin-right: $gut-width;
+  }
+
+  .col_lg_7{
+    @include grid(7);
+    margin-right: $gut-width;
+  }
+
+  .col_lg_8{
+    @include grid(8);
+    margin-right: $gut-width;
+  }
+
+  .col_lg_9{
+    @include grid(9);
+    margin-right: $gut-width;
+  }
+
+  .col_lg_10{
+    @include grid(10);
+    margin-right: $gut-width;
+  }
+
+  .col_lg_11{
+    @include grid(11);
+    margin-right: $gut-width;
+  }
+
+  .col_lg_12{
+    @include grid(12);
+    margin-right: $gut-width;
+  }
+
+  .col_lg_13{
+    @include grid(13);
+    margin-right: $gut-width;
+  }
+
+  .col_lg_14{
+    @include grid(14);
+    margin-right: $gut-width;
+  }
+
+  .col_lg_15{
+    @include grid(15);
+    margin-right: $gut-width;
+  }
+  
+}
+
+
+
