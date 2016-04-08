@@ -1,5 +1,59 @@
 @import 'variables';
 
+@import 'col_grid';
+
 body {
-  background: $light-grey;
+ 
 }
+
+
+header{
+	width: 100%;
+	padding: 1em;
+	border-bottom: 2px solid black;
+}
+
+
+.head_btn_container{
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.btn{
+	width: 100px;
+	height: 70px; //placeholder
+	float: left;
+	margin-right: 2em;
+	border: 2px solid black;
+}
+
+
+.home_page_message{
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	line-height: 1;
+
+	p{
+		font-size: 2em;
+		text-align: center;
+	}
+}
+
+
+h1{
+	font-size: 5em;
+	text-align: center;
+}
+
+.mini_h1{
+	font-size: 0.6em;
+}
+
+
+
+
+
+
