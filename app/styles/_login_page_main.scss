@@ -1,0 +1,55 @@
+
+@import 'variables';
+
+@import 'col_grid',
+		'breakpoints';
+
+.login_page_container{
+	max-width: $max_container_width;
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+
+	h2{
+		text-align: center;
+	}
+}
+
+.back_home_btn{
+	width: 150px;
+	height: 20px;
+	padding: 0.5em 0.2em;
+	border: 1px solid black;
+	position: absolute;
+	top: 20px;
+	left: 5%;
+	text-align: center;
+}
+
+.login_page_btn{
+	width: 200px;
+	height: 20px;
+	padding: 0.5em 1em;
+	border: 1px solid black;
+}
+
+
+.create_acc_container, .login_container{
+	float: left;
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+
+label{
+	display: block;
+}
+
+input{
+	width: 85%;
+	margin-bottom: 2em;
+}
+
+
+
+
+
