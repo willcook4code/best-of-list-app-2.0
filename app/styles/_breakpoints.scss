@@ -9,6 +9,15 @@
 		font-size: 2em;
 	}
 
+	header{
+		position: fixed;
+		bottom: 0;
+		border-bottom: none;
+	}
+
+	.head_btn_container{
+		max-width: 400px;
+	}
 
 	.home_page_message{
 
@@ -16,12 +25,47 @@
 			display: none;
 		}
 	}
+	
+
+	.mobile_tab_container{
+		display: block;
+	}
+
+	.head_tab{
+		padding: 1em 0.5em;
+	 	padding-right: 0;
+	}
+
+	.user_added_tab{
+		font-size: 0.9em;
+		padding: 1.1em 0 1.2em 0.6em;
+	}
 
 
 	.btn{
-		width: 40px;
-		height: 20px; //placeholder
+		width: 60px;
+		height: 40px; //placeholder
 		background-color: red;
+	}
+
+	.ham_btn{
+		display: block;
+	}
+
+	.submit_list_btn{
+		display: none;
+	}
+
+
+	.least_rated, .user_added{
+		display: none;
+	}
+
+	.list_row{
+
+		h2{
+			display: none;
+		}
 	}
 
 	.list_poster{
@@ -35,16 +79,32 @@
 	}
 
 	.voting_container{
-		width: 100%;
+		width: 90%;
+		max-width: 305px;
 		margin: 2em auto 3em auto;
 		float: none;
 	}
 
 	.up_vote, .down_vote{
-		min-width: 100px;
+		width: 130px;
+		margin: 0 3%;
 	}
 
 
+	footer{
+		display: none;
+	}
+
+
+}
+
+// LITERALLY JUST FOR USER_ADDED_TAB ONLY
+@media(min-width: 417px){
+	.user_added_tab{
+		font-size: 1em;
+		padding: 1em 0.5em;
+		padding-right: 0;
+	}
 }
 
 
@@ -55,6 +115,19 @@
 
 	h1{
 		font-size: 3em;
+	}
+
+	header{
+		position: static;
+		border-bottom: 2px solid black;
+	}
+
+	.head_btn_container{
+		max-width: $max_container_width;
+	}
+
+	.mobile_tab_container{
+		display: none;
 	}
 	
 
@@ -72,9 +145,29 @@
 		background-color: yellow;
 	}
 
+	.ham_btn{
+		display: none;
+	}
+
+	.submit_list_btn{
+		display: block;
+	}
+	
+
+	.least_rated, .user_added{
+		display: block;
+	}
+
+	.list_row{
+		h2{
+			display: block;
+		}
+	}
+
 
 	.list_poster{
 		width: 100%;
+		min-width: 120px;
 		height: 150px;
 	}
 
@@ -82,6 +175,11 @@
 		width: 15%;
 		margin: 0 2%;
 		float: left;
+	}
+
+	.up_vote, .down_vote{
+		width: 40%;
+		margin: 5%;
 	}
 
 
@@ -92,7 +190,11 @@
 	.up_vote, .down_vote{
 		min-width: 40%;
 	}
+	
 
+	footer{
+		display: block;
+	}
 }
 
 
