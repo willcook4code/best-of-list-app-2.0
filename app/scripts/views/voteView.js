@@ -29,23 +29,20 @@ const voteView = Backbone.View.extend({
 		let newVote = {
 			up_vote: 1,
 			down_vote: 0,
-			user_id: '',
-			list_id: $(this.el).id;
+			user_id: 1,
+			list_id: this.id
 		};
-		userVote.create(newVote);
-		// let newVoteView = new VoteView(
-		// 	newVote.up_vote;
-		// 	newVote.down_vote;
-		// 	newVote.user_id;
-		// 	newVote.list_id;
-		// 	);
-		console.log(newVote);
-        
-    },
-    downVote: function() {
-        $(this.$el).
-    }
+		userVote = $.post('https://wolfpack-lists.herokuapp.com/api/votes', {newVote});
+	},
+	downVote: function() {
+		let newVote = {
+			up_vote: 0,
+			down_vote: 1,
+			user_id: 1,
+			list_id: this.id
+		};
+		userVote = $.post('https://wolfpack-lists.herokuapp.com/api/votes', {newVote});
+	}
 });
-
 
 export default voteView;
