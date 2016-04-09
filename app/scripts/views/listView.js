@@ -18,12 +18,12 @@ const listView = Backbone.View.extend({
 		this.render();
 	},
 	template: function() {
-		return `
-			<div class="list_poster"> <img src="${this.image_ref}"> </div>
-			<h3> ${this.list_title} </h3>
-			<div class="up_vote"> </div>
-			<div class="down_vote"> </div>
-		`
+		// return `
+		// 	<div class="list_poster"> <img src="${this.image_ref}"> </div>
+		// 	<h3> ${this.list_title} </h3>
+		// 	<div class="up_vote"> </div>
+		// 	<div class="down_vote"> </div>
+		// `
 	},
 	render: function() {
 		this.$el.html(this.template());
