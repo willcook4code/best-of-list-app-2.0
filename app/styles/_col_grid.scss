@@ -1,7 +1,7 @@
 
 $tot-width: 100%;
-$num-col: 15;
-$gut-width: 2%;
+$num-col: 12;
+$gut-width: 3%;
 
 $ind-col-width: ($tot-width - ($gut-width * ($num-col - 1))) / $num-col;
 
@@ -21,7 +21,7 @@ $ind-col-width: ($tot-width - ($gut-width * ($num-col - 1))) / $num-col;
   
 
 
-@media (min-width: 500px){
+@media (min-width: 600px){
   
   .col_md_1{
     @include grid(1);
@@ -82,21 +82,6 @@ $ind-col-width: ($tot-width - ($gut-width * ($num-col - 1))) / $num-col;
     @include grid(12);
     margin-right: $gut-width;
   }
-
-  .col_md_13{
-    @include grid(13);
-    margin-right: $gut-width;
-  }
-
-  .col_md_14{
-    @include grid(14);
-    margin-right: $gut-width;
-  }
-
-  .col_md_15{
-    @include grid(15);
-    margin-right: $gut-width;
-  }
   
 }
 
@@ -104,7 +89,7 @@ $ind-col-width: ($tot-width - ($gut-width * ($num-col - 1))) / $num-col;
 
 
 
-@media (min-width: 860px){
+@media (min-width: 1000px){
   
   .col_lg_1{
     @include grid(1);
@@ -163,21 +148,6 @@ $ind-col-width: ($tot-width - ($gut-width * ($num-col - 1))) / $num-col;
 
   .col_lg_12{
     @include grid(12);
-    margin-right: $gut-width;
-  }
-
-  .col_lg_13{
-    @include grid(13);
-    margin-right: $gut-width;
-  }
-
-  .col_lg_14{
-    @include grid(14);
-    margin-right: $gut-width;
-  }
-
-  .col_lg_15{
-    @include grid(15);
     margin-right: $gut-width;
   }
   
