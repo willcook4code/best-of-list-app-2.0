@@ -10,8 +10,8 @@ let compiledLists = new listCollection();
 var settings = {
 	success: function() {
 		compiledLists.forEach((list) => {
-			let newListView = new listView(list.get('image_ref'), list.get('source_ref'), list.get('list_desc'), list.get('list_title'));
-			$('.mostViewed').append(newListView.el);
+			let newListView = new listView(list.get('image_ref'), list.get('source_ref'), list.get('list_desc'), list.get('list_title'), list.get('id'));
+			$('.list_row').append(newListView.el);
 		});
 	}
 };
