@@ -1,6 +1,7 @@
 @import 'variables';
 
-@import 'col_grid';
+@import 'col_grid',
+		'breakpoints';
 
 body {
  
@@ -22,8 +23,6 @@ header{
 }
 
 .btn{
-	width: 100px;
-	height: 70px; //placeholder
 	float: left;
 	margin-right: 2em;
 	border: 2px solid black;
@@ -34,23 +33,106 @@ header{
 	width: 100%;
 	max-width: 1000px;
 	margin: 0 auto;
+	margin-bottom: 10%;
 	line-height: 1;
 
+	h2{
+		text-align: center;
+	}
+
 	p{
-		font-size: 2em;
 		text-align: center;
 	}
 }
 
 
 h1{
-	font-size: 5em;
 	text-align: center;
 }
 
 .mini_h1{
 	font-size: 0.6em;
 }
+
+
+.list_row{
+	width: 100%;
+	margin: 2em 0;
+	padding: 2em;
+	background-color: #EBEBEB;
+	overflow: hidden;
+
+	h2{
+		margin-left: 2%;
+	}
+}
+
+.voting_container{
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.list_poster{
+	margin: 0 auto;
+	border: 2px solid black;
+	background-color: white;
+	box-sizing: border-box;
+}
+
+
+.up_vote, .down_vote{
+	width: 40%;
+	height: 20px;
+	margin: 5%;
+	float: left;
+
+	&:hover{
+		cursor: pointer;
+	}
+}
+
+.up_vote{
+	background-color: green;
+}
+
+.down_vote{
+	background-color: red;
+}
+
+h3{
+	text-align: center;
+}
+
+
+.pre_footer_container{
+	width: 100%;
+	max-width: 1000px;
+	margin: 2em auto;
+	padding: 2em;
+	text-align: center;
+
+	p{
+		font-size: 1.5em;
+	}
+}
+
+.submit_list_long_btn{
+	width: 200px;
+	height: 30px;
+	margin: 0 auto;
+	padding: 0.5em 2em 0 2em;
+	border: 2px solid black;
+	display: block;
+}
+
+
+footer{
+	width: 100%;
+	height: 100px;
+	background-color: grey;
+}
+
+
 
 
 
