@@ -91,7 +91,7 @@
 
 		<p> Don't see a List you want to vote for? </p>
 
-		<a href="#" class="submit_list_long_btn"> Submit a List </a>
+		<a href="#" class="submit_list_btn submit_long_btn"> Submit a List </a>
 
 	</div>
 
@@ -103,9 +103,48 @@
 
 
 
+	<script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>	
+
+	<script type="text/javascript">
 	
 
+	// JANINA'S CODE
+	$(document).ready(function(){
 
+		$('.most_rated_tab').click(function(){
+			$('.least_rated').hide();
+			$('.least_rated_tab').removeClass('current_tab');
+			$('.user_added').hide();
+			$('.user_added_tab').removeClass('current_tab');
+
+			$('.most_rated').show();
+			$('.most_rated_tab').addClass('current_tab');
+		});
+
+		$('.least_rated_tab').click(function(){
+			$('.most_rated').hide();
+			$('.most_rated_tab').removeClass('current_tab');
+			$('.user_added').hide();
+			$('.user_added_tab').removeClass('current_tab');
+
+			$('.least_rated').show();
+			$('.least_rated_tab').addClass('current_tab');
+		});
+
+		$('.user_added_tab').click(function(){
+			$('.most_rated').hide();
+			$('.most_rated_tab').removeClass('current_tab');
+			$('.least_rated').hide();
+			$('.least_rated_tab').removeClass('current_tab');
+
+			$('.user_added').show();
+			$('.user_added_tab').addClass('current_tab');
+		});
+
+
+	});
+
+	</script>
 
   </body>
 </html>
