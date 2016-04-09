@@ -60,12 +60,34 @@ h1{
 }
 
 
+.mobile_tab_container{
+	width: 100%;
+
+	a{
+		text-decoration: none;
+	}
+}
+
+.head_tab{
+	width: 32%;
+	margin: 0.5%;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+}
+
+.current_tab{
+	border-bottom: 2px solid black;
+}
+
+
 .list_row{
 	width: 100%;
 	margin: 2em 0;
 	padding: 2em;
 	background-color: #EBEBEB;
 	overflow: hidden;
+	box-sizing: border-box;
 
 	h2{
 		margin-left: 2%;
@@ -86,9 +108,7 @@ h1{
 
 
 .up_vote, .down_vote{
-	width: 40%;
 	height: 20px;
-	margin: 5%;
 	float: left;
 
 	&:hover{
