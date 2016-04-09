@@ -1,0 +1,97 @@
+
+@import 'variables';
+
+@import 'col_grid',
+		'breakpoints';
+
+.list_page_container{
+	max-width: $max_container_width;
+	position: relative;
+	margin: 0 auto;
+
+	h2{
+		text-align: center;
+	}
+}
+
+.back_home_btn{
+	width: 150px;
+	height: 20px;
+	background-color: blue;
+	position: absolute;
+	top: 20px;
+	left: 5%;
+	text-align: center;
+}
+
+.list_winner_container, .list_voter_info{
+	float: left;
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+
+.list_winner_img{
+	border: 2px solid black;
+	width: 90%;
+	margin: 0 auto;
+	height: 400px; //placeholder
+}
+
+
+
+
+.vote_container{
+	float: left;
+	border: 2px solid black;
+	padding: 2em;
+}
+
+.vote_up_stats, .vote_down_stats{
+	width: 200px;
+	height: 15px;
+	margin: 0 auto;
+	margin-left: 1em;
+	border: 2px solid black;
+}
+
+
+
+
+
+.list_items_container{
+	width: 90%;
+	margin: 0 auto;
+	display: block;
+}
+
+.list_item{
+	width: 100%;
+	margin: 1em auto;
+	padding: 1em 2em;
+	background-color: #F9F9F9;
+	border: 1px solid black;
+	box-sizing: border-box;
+}
+
+
+.list_info{
+	width: 300px;
+	height: 500px;
+	display: inline-block;
+	float: left;
+	background-color: blue;
+
+	h2{
+		text-align: left;
+	}
+
+	a{
+		text-decoration: underline;
+	}
+}
+
+
+
+
+
+

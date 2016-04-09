@@ -1,7 +1,10 @@
 @import 'variables';
 
 @import 'col_grid',
-		'breakpoints';
+		'breakpoints',
+		'list_page_main';
+
+
 
 body {
  
@@ -14,10 +17,15 @@ header{
 	border-bottom: 2px solid black;
 }
 
+a{
+	text-decoration: none;
+	color: black;
+}
+
 
 .head_btn_container{
 	width: 100%;
-	max-width: 1200px;
+	max-width: $max_container_width;
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -130,6 +138,7 @@ footer{
 	width: 100%;
 	height: 100px;
 	background-color: grey;
+	clear: both;
 }
 
 
