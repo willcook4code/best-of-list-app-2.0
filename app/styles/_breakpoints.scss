@@ -96,6 +96,60 @@
 	}
 
 
+
+
+
+// LIST_PAGE_MAIN BREAKPOINTS
+	
+	.list_winner_container, .list_voter_info{
+		width: 100%;
+	}
+
+	.list_winner_container{
+		margin: 10% 2.5%;
+	}
+
+	.list_voter_info{
+		margin-bottom: 30%;
+	}
+
+	.list_winner_img{
+		width: 300px;
+		margin: 0 auto;
+		margin-top: 2em;
+	}
+
+	.show_list_items{
+		display: block;
+	}
+
+	.list_items_container{
+		display: none;
+	}
+
+	.vote_container{
+		float: none;
+	}
+
+	.list_info{
+		margin-top: 0;
+		padding: 2em;
+		padding-top: 0;
+		float: none;
+
+		h2{
+			text-align: center;
+		}
+	}
+	
+	.mobile_size{
+		display: block;
+	}
+
+	.desktop_size{
+		display: none;
+	}
+
 }
 
 // LITERALLY JUST FOR USER_ADDED_TAB ONLY
@@ -195,6 +249,54 @@
 	footer{
 		display: block;
 	}
+
+
+
+
+
+// LIST_PAGE_MAIN BREAKPOINTS
+
+	.list_winner_container, .list_voter_info{
+		width: 45%;
+		margin: 10% 2.5%;
+	}
+
+	.list_winner_img{
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.show_list_items{
+		display: none;
+		float: left;
+	}
+
+	.list_items_container{
+		display: block;
+	}
+
+	.vote_container{
+		float: left;
+	}
+
+	.list_info{
+		margin-top: 10%;
+		padding: 1em 2em;
+		float: left;
+
+		h2{
+			text-align: left;
+		}
+	}
+
+	.mobile_size{
+		display: none;
+	}
+
+	.desktop_size{
+		display: block;
+	}
+
 }
 
 
