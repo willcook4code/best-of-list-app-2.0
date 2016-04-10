@@ -3,7 +3,8 @@
 @import 'col_grid',
 		'breakpoints',
 		'list_page_main',
-		'login_page_main';
+		'login_page_main',
+		'submit_list_main.scss';
 
 
 
@@ -22,11 +23,6 @@ header{
 a{
 	text-decoration: none;
 	color: black;
-}
-
-.list_desc{
-	rows: 5;
-	cols: 50;
 }
 
 
