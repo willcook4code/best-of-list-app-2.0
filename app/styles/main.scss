@@ -9,7 +9,7 @@
 
 
 body {
- 
+	font-family: 'Roboto Condensed', sans-serif;
 }
 
 
@@ -65,10 +65,15 @@ a{
 
 h1{
 	text-align: center;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 .mini_h1{
 	font-size: 0.6em;
+}
+
+.home_page_tagline{
+	color: $prim_color;
 }
 
 
