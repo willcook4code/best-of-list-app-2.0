@@ -5,8 +5,7 @@ import listView from './views/listView';
 import voteCollection from './collections/voteCollection';
 import voteView from './views/listView';
 import userCollection from './collections/userCollection';
-
-let newUserSubmission = new listCollection();
+import submitFormCollection from './collections/submitFormCollection';
 
 let compiledLists = new listCollection();
 var settings = {
@@ -19,9 +18,12 @@ var settings = {
 };
 compiledLists.fetch(settings);
 
-$('.submit_page_form').submit(function() {
-    let submission = {
-        list_winner: $('#list_winner').val(),
+let newUserSubmission = new submitFormCollection();
+
+$('.submit_list_page_btn').on('click', e => {
+	let submission = {
+
+	    list_winner: $('#list_winner').val(),
 		list_title: $('#list_title').val(),
 		list_desc: $('#list_desc').val(),
 		list_url: $('#list_url').val(),
@@ -34,10 +36,40 @@ $('.submit_page_form').submit(function() {
 		seven: $('.list_item_7').val(), 
 		eight: $('.list_item_8').val(),
 		nine: $('.list_item_9').val(),
-		ten: $('.list_item_10').val(), 
-    };
-newUserSubmission = $.post('https://wolfpack-lists.herokuapp.com/api/lists', {submision});   
-	$('.submit_list_page_input').val('');
-    $('.user_added').append(newListView.el);
-    compiledLists.fetch(settings);
-});
+		ten: $('.list_item_10').val()
+	};
+
+	
+
+// 	var postSettings = {
+// 		url: 'https://wolfpack-lists.herokuapp.com/api/lists',
+// 		type: 'post',
+// 		data: submission,
+// 		dataType: 'json',
+// 		success: function(data) {
+// 			console.log('I run good');
+// 		},
+// 		error: function(err) {
+// 			console.log('try again');
+// 		},
+// 		complete: function(){
+// 			console.log('I run');
+// 		}
+
+// 		// error: ,
+// 		// complete: 
+// 	};
+
+// 	$.ajax(postSettings);
+// });
+
+
+
+	// console.log('click');
+	// e.preventDefault();
+
+	// newUserSubmission.create(submission);
+	// $('.submit_list_page_input').val('');
+ //    $('.user_added').append(newListView.el);
+ //    compiledLists.fetch(settings);
+// });
