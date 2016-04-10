@@ -1,8 +1,6 @@
 
 @import 'variables';
 
-@import 'col_grid',
-		'breakpoints';
 
 
 
@@ -26,8 +24,6 @@
 
 .submit_user_input{
 	width: 90%;
-	margin: 0 auto;
-	margin-top: 5%;
 
 	h1{
 		font-size: 3em;
@@ -62,6 +58,10 @@
 	min-width: 300px;
 	margin: 0 auto;
 	margin-bottom: 2em;
+}
+
+.submit_list_page_btn{
+	text-align: center;
 }
 
 
