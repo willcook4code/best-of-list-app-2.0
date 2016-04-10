@@ -2,7 +2,7 @@ import Backbone from 'backbone';
 
 const listModel = Backbone.Model.extend({
 	defaults: {
-		image_ref: 'https://www.americasfootprints.com/images/members/notAvailable.jpg',
+		image_ref: '',
 		source_ref: '',
 		list_desc: 'Description not entered.',
 		list_title: 'Title not available.',

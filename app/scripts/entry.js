@@ -18,28 +18,26 @@ var settings = {
 };
 compiledLists.fetch(settings);
 
-let newUserSubmission = new submitFormCollection();
+// let newUserSubmission = new submitFormCollection();
 
-$('.submit_list_page_btn').on('click', e => {
-	let submission = {
+// $('.submit_long_btn').on('click', e => {
+// 	let submission = {
 
-	    list_winner: $('#list_winner').val(),
-		list_title: $('#list_title').val(),
-		list_desc: $('#list_desc').val(),
-		list_url: $('#list_url').val(),
-		one: $('.list_item_1').val(),
-		two: $('.list_item_2').val(), 
-		three: $('.list_item_3').val(),
-		four: $('.list_item_4').val(),
-		five: $('.list_item_5').val(),
-		six: $('.list_item_6').val(),
-		seven: $('.list_item_7').val(), 
-		eight: $('.list_item_8').val(),
-		nine: $('.list_item_9').val(),
-		ten: $('.list_item_10').val()
-	};
-
-	
+// 	    list_winner: $('#list_winner').val(),
+// 		list_title: $('#list_title').val(),
+// 		list_desc: $('#list_desc').val(),
+// 		list_url: $('#list_url').val(),
+// 		one: $('.list_item_1').val(),
+// 		two: $('.list_item_2').val(), 
+// 		three: $('.list_item_3').val(),
+// 		four: $('.list_item_4').val(),
+// 		five: $('.list_item_5').val(),
+// 		six: $('.list_item_6').val(),
+// 		seven: $('.list_item_7').val(), 
+// 		eight: $('.list_item_8').val(),
+// 		nine: $('.list_item_9').val(),
+// 		ten: $('.list_item_10').val()
+// 	};
 
 // 	var postSettings = {
 // 		url: 'https://wolfpack-lists.herokuapp.com/api/lists',
@@ -55,21 +53,16 @@ $('.submit_list_page_btn').on('click', e => {
 // 		complete: function(){
 // 			console.log('I run');
 // 		}
-
-// 		// error: ,
-// 		// complete: 
 // 	};
 
 // 	$.ajax(postSettings);
 // });
 
+$('user_btn').on("click", function(e) {
+	$(e.target).toggleClass('login_dropdown');
+});
 
+$('submit_list_btn').on("click", function(e) {
+	$(e.target).toggleClass('submit_list_dropdown');
 
-	// console.log('click');
-	// e.preventDefault();
-
-	// newUserSubmission.create(submission);
-	// $('.submit_list_page_input').val('');
- //    $('.user_added').append(newListView.el);
- //    compiledLists.fetch(settings);
-// });
+});
