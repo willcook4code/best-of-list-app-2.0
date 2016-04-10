@@ -132,9 +132,15 @@ h1, h2, h3{
 
 .list_poster{
 	margin: 0 auto;
-	border: 2px solid black;
-	background-color: white;
 	box-sizing: border-box;
+	overflow: hidden;
+	position: relative;
+}
+
+.list_poster_img{
+	position: absolute;
+	left: -30px;
+	height: 100%;
 }
 
 .vote_btn_container{
@@ -203,8 +209,13 @@ h3{
 	height: 30px;
 	margin: 0 auto;
 	padding: 0.5em 2em 0 2em;
-	border: 2px solid black;
 	display: block;
+	background-color: $sec_color;
+	color: white;
+
+	&:hover{
+		background-color: darken($sec_color, 10%);
+	}
 }
 
 

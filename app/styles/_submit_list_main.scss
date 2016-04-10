@@ -15,11 +15,15 @@
 	width: 150px;
 	height: 20px;
 	padding: 0.5em 0.2em;
-	border: 1px solid black;
 	position: absolute;
 	top: 20px;
 	left: 5%;
 	text-align: center;
+	background-color: $prim_color;
+
+	&:hover{
+		background-color: darken($prim_color, 10%);
+	}
 }
 
 .submit_user_input{
