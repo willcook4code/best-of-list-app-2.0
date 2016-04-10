@@ -12,7 +12,6 @@
 	header{
 		position: fixed;
 		bottom: 0;
-		border-bottom: none;
 	}
 
 	.head_btn_container{
@@ -39,13 +38,6 @@
 	.user_added_tab{
 		font-size: 0.9em;
 		padding: 1.1em 0 1.2em 0.6em;
-	}
-
-
-	.btn{
-		width: 60px;
-		height: 40px; //placeholder
-		background-color: red;
 	}
 
 	.ham_btn{
@@ -188,7 +180,7 @@
 
 	header{
 		position: static;
-		border-bottom: 2px solid black;
+		border-bottom: 2px solid $prim_color;
 	}
 
 	.head_btn_container{
@@ -206,12 +198,6 @@
 			display: block;
 			font-size: 1.5em;
 		}
-	}
-
-	.btn{
-		width: 60px;
-		height: 30px; //placeholder
-		background-color: yellow;
 	}
 
 	.ham_btn{
@@ -244,6 +230,14 @@
 		width: 15%;
 		margin: 0 2%;
 		float: left;
+
+		.fa-3x{
+			display: none;
+		}
+
+		.fa-2x{
+			display: inline;
+		}
 	}
 
 	.up_vote, .down_vote{
@@ -298,14 +292,6 @@
 	.vote_container{
 		float: left;
 	}
-	
-	.fa-3x{
-		display: none;
-	}
-
-	.fa-2x{
-		display: inline;
-	}
 
 	.list_info{
 		margin-top: 10%;
@@ -354,23 +340,20 @@
 		}
 	}
 
-	.btn{
-		width: 100px;
-		height: 70px; //placeholder
-		background-color: green;
-	}
-
 
 	.list_poster{
 		height: 250px;
 	}
+	
+	.voting_container{
+		
+		.fa-3x{
+			display: inline;
+		}
 
-	.fa-3x{
-		display: inline;
-	}
-
-	.fa-2x{
-		display: none;
+		.fa-2x{
+			display: none;
+		}
 	}
 
 }
