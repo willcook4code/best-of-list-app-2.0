@@ -9,7 +9,7 @@
 
 
 body {
- 
+	font-family: 'Roboto Condensed', 'Helvetica', sans-serif;
 }
 
 
@@ -17,7 +17,8 @@ header{
 	z-index: 2;
 	width: 100%;
 	padding: 1em;
-	background-color: white;
+	background-color: $dark_accent;
+	box-sizing: border-box;
 }
 
 a{
@@ -36,7 +37,12 @@ a{
 .btn{
 	float: left;
 	margin-right: 2em;
-	border: 2px solid black;
+	padding: 0.5em 1em;
+	color: white;
+
+	&:hover{
+		color: $prim_color;
+	}
 }
 
 .ham_btn{
@@ -65,10 +71,19 @@ a{
 
 h1{
 	text-align: center;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+h1, h2, h3{
+	color: $dark_accent;
 }
 
 .mini_h1{
 	font-size: 0.6em;
+}
+
+.home_page_tagline{
+	color: $prim_color;
 }
 
 
@@ -97,9 +112,9 @@ h1{
 	width: 100%;
 	margin: 2em 0;
 	padding: 2em;
-	background-color: #EBEBEB;
 	overflow: hidden;
 	box-sizing: border-box;
+	background-color: lighten(grey, 45%);
 
 	h2{
 		margin-left: 2%;
@@ -109,6 +124,10 @@ h1{
 .voting_container{
 	overflow: hidden;
 	box-sizing: border-box;
+
+	&:hover{
+		cursor: pointer;
+	}
 }
 
 .list_poster{
@@ -118,10 +137,14 @@ h1{
 	box-sizing: border-box;
 }
 
+.vote_btn_container{
+	width: 98%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
 
 .up_vote, .down_vote{
-	height: 20px;
-	float: left;
 
 	&:hover{
 		cursor: pointer;
@@ -129,15 +152,37 @@ h1{
 }
 
 .up_vote{
-	background-color: green;
+	margin-left: 15%;
+	margin-right: 0;
+	float: left;
+	color: $sec_color;
+
+	&:hover{
+		color: darken($sec_color, 10%);
+	}
 }
 
 .down_vote{
-	background-color: red;
+	margin-right: 15%;
+	margin-left: 0;
+	float: right;
+	color: $prim_color;
+
+	&:hover{
+		color: darken($prim_color, 10%);
+	}
 }
+
 
 h3{
 	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	&:hover{
+		text-decoration: underline;
+	}
 }
 
 
@@ -166,7 +211,6 @@ h3{
 footer{
 	width: 100%;
 	height: 100px;
-	background-color: grey;
 	clear: both;
 }
 
