@@ -85,8 +85,12 @@
 		float: none;
 	}
 
-	.up_vote, .down_vote{
-		margin: 0 3%;
+	.fa-3x{
+		display: inline;
+	}
+
+	.fa-2x{
+		display: none;
 	}
 
 
@@ -174,7 +178,7 @@
 
 
 
-@media(min-width: 600px){
+@media(min-width: 650px){
 	
 	// CSS PRESETS
 
@@ -243,7 +247,17 @@
 	}
 
 	.up_vote, .down_vote{
-		margin: 0 25%;
+		margin: 0 10%;
+	}
+
+	.up_vote{
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.down_vote{
+		margin-right: 0;
+		margin-left: 0;
 	}
 
 
@@ -284,6 +298,14 @@
 	.vote_container{
 		float: left;
 	}
+	
+	.fa-3x{
+		display: none;
+	}
+
+	.fa-2x{
+		display: inline;
+	}
 
 	.list_info{
 		margin-top: 10%;
@@ -315,6 +337,7 @@
 
 
 
+
 @media(min-width: 1000px){
 	
 	// CSS PRESETS
@@ -340,6 +363,14 @@
 
 	.list_poster{
 		height: 250px;
+	}
+
+	.fa-3x{
+		display: inline;
+	}
+
+	.fa-2x{
+		display: none;
 	}
 
 }

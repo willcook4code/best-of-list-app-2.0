@@ -123,9 +123,14 @@ h1{
 	box-sizing: border-box;
 }
 
+.vote_btn_container{
+	width: 98%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
 
 .up_vote, .down_vote{
-	float: left;
 
 	&:hover{
 		cursor: pointer;
@@ -133,12 +138,17 @@ h1{
 }
 
 .up_vote{
-	background-color: green;
+	margin-left: 15%;
+	margin-right: 0;
+	float: left;
 }
 
 .down_vote{
-	background-color: red;
+	margin-right: 15%;
+	margin-left: 0;
+	float: right;
 }
+
 
 h3{
 	text-align: center;
