@@ -1,8 +1,11 @@
 
 @import 'variables';
 
-@import 'col_grid',
-		'breakpoints';
+
+.list_page_full_container{
+	display: none;
+}
+
 
 .list_page_container{
 	max-width: $max_container_width;
