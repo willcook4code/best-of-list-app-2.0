@@ -1,0 +1,68 @@
+
+@import 'variables';
+
+@import 'col_grid',
+		'breakpoints';
+
+
+
+.submit_page_container{
+	max-width: $max_container_width;
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.back_home_btn{
+	width: 150px;
+	height: 20px;
+	padding: 0.5em 0.2em;
+	border: 1px solid black;
+	position: absolute;
+	top: 20px;
+	left: 5%;
+	text-align: center;
+}
+
+.submit_user_input{
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 5%;
+
+	h1{
+		font-size: 3em;
+	}
+}
+
+
+.submit_list_items_container{
+	z-index: 1;
+	width: 90%;
+	margin: 2em auto;
+}
+
+.submit_page_form{
+	width: 99%;
+	max-width: 610px;
+	margin: 0 auto;
+}
+
+.list_item{
+	width: 100%;
+	margin: 1em auto;
+	padding: 1em;
+	background-color: #F9F9F9;
+	border: 1px solid black;
+	box-sizing: border-box;
+}
+
+.submit_list_page_input, textarea{
+	width: 100%;
+	max-width: 600px;
+	min-width: 300px;
+	margin: 0 auto;
+	margin-bottom: 2em;
+}
+
+
+
