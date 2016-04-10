@@ -157,7 +157,22 @@
 		margin: 8em auto;
 	}
 
+	.login_container{
+		margin-bottom: 8em;
+	}
+
+	.login_page_container{
+		
+		h2{
+			margin-top: 3em;
+		}
+	}
+
 }
+
+
+
+
 
 // LITERALLY JUST FOR USER_ADDED_TAB ONLY
 @media(min-width: 417px){
@@ -167,6 +182,8 @@
 		padding-right: 0;
 	}
 }
+
+
 
 
 
@@ -265,8 +282,6 @@
 
 
 
-
-
 // LIST_PAGE_MAIN BREAKPOINTS
 
 	.list_winner_container, .list_voter_info{
@@ -310,11 +325,24 @@
 		display: block;
 	}
 
+
+
 // SUBMIT LIST PAGE
 	.submit_user_input{
 		margin: 0 auto;
 		margin-top: 8em;
 		margin-bottom: 3em;
+	}
+
+	.login_container{
+		margin-bottom: 10%;
+	}
+
+	.login_page_container{
+		
+		h2{
+			margin-top: 2em;
+		}
 	}
 
 }
