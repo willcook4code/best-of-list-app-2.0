@@ -1,6 +1,9 @@
 import Backbone from 'backbone';
 import $ from 'jquery';
 import voteCollection from '../collections/voteCollection';
+import displayListCollection from '../collections/displayListCollection';
+import singleListView from '../views/singleListView';
+import listCollection from '../collections/listCollection';
 
 let userVote = new voteCollection();
 
@@ -8,8 +11,8 @@ const listView = Backbone.View.extend({
 	className: 'voting_container',
 	events: {
         'click .up_vote': 'upVote',
-        'click .down_vote': 'downVote'
-
+        'click .down_vote': 'downVote',
+        // 'click .list_poster': 'showList'
     },
 	initialize: function(image_ref, source_ref, list_desc, list_title, id) {
 		this.image_ref = image_ref;
@@ -29,7 +32,6 @@ const listView = Backbone.View.extend({
 	},
 	render: function() {
 		this.$el.html(this.template());
-		console.log(this.id);
 	},
 	upVote: function() {
 		let newVote = {
@@ -48,7 +50,26 @@ const listView = Backbone.View.extend({
 			list_id: this.id
 		};
 		userVote = $.post('https://wolfpack-lists.herokuapp.com/api/votes', {newVote});
-	}
+	},
+	// showList: function(e) {
+	// 	e.preventDefault();
+	// 	let largeViews = new listCollection();
+	// 	var settings = {
+	// 		success: function() {
+	// 			largeViews.forEach((list) => {
+	// 				let newSingleListView = new singleListView(list.get('image_ref'), list.get('source_ref'), list.get('list_desc'), list.get('list_title'), list.get('id'), list.get('items'));
+	// 				console.log(list.id);
+	// 				console.log(list.items);
+	// 				console.log(newSingleListView);
+	// 				$('.list_page').append(newSingleListView.el);
+	// 				// window.location = 'list_page_default.html';
+	// 			});
+	// 		}
+	// 	};
+	// 	largeViews.fetch(settings);
+		
+	// 	console.log('yo');
+	// }
 });
 
 export default listView;
