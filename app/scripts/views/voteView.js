@@ -19,7 +19,7 @@ const voteView = Backbone.View.extend({
 	},
 	template: function() {
 		return `
-
+			
 		`
 	},
 	render: function() {
