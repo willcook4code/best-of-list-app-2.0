@@ -37,7 +37,6 @@ const listView = Backbone.View.extend({
 			list_id: this.id
 		};
 		userVote = $.post('https://wolfpack-lists.herokuapp.com/api/votes', {newVote});
-		console.log(newVote);
 	}
  
 	// $(".input-form" ).submit( (e) => {
