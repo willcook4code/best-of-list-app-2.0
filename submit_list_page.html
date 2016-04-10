@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Webpack!</title>
+    <title>Submit a List</title>
 
 	<!-- NORMALIZE -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css">
@@ -29,77 +29,47 @@
 	</header>
 
 
-	<div class="list_page_container">
+	<div class="submit_page_container col_sm_1 col_md_10 col_lg_10">
 
-		<a href="#" class="back_home_btn"> Back to Home </a>
-
+		<a href="index.html" class="back_home_btn"> Back to Home </a>	
 		
 
-		<div class="list_winner_container col_sm_1 col_md_5 col_lg_5">	
 
-			<div class="list_winner_img">	</div>
+		<div class="submit_user_input">		
 
-			<h2> I'm the winner of this list ;D </h2>
+			<h1> Enter in the List information </h1>
+
+			<form class="submit_page_form">
+
+				<label for="list_winner"> Winner of List </label>
+				<input class="submit_list_page_input" type="text" id="list_winner" name="Winner of List">
+
+				<label for="list_title"> List Title </label>
+	    		<input class="submit_list_page_input" type="text" id="list_title" name="List Title">
+
+				<label for="list_desc"> List Description </label>
+	    		<textarea id="list_desc" name=""> </textarea>
+
+	    		<label for="list_url"> Link to List URL </label>
+	    		<input class="submit_list_page_input" type="text" id="list_url" name="List page URL">
 
 
+				<label for="submit_list_items"> List Items </label>
+	    		<input class="submit_list_page_input" type="text" id="submit_list_items" name="List Item 1">
 
-			<div class="list_info mobile_size">
+	    		<input class="submit_list_page_input" type="text" id="submit_list_items" name="List Item 2">
 
-				<h2> I'm the Title of the List </h2>
+	    		<input class="submit_list_page_input" type="text" id="submit_list_items" name="List Item 3">
 
-				<p> I'm a quick description of the list, woohoo! Gentrify small batch offal, trust fund fap occupy kitsch normcore bushwick mumblecore fixie artisan. </p>
+	    		<input class="submit_list_page_input" type="text" id="submit_list_items" name="List Item 4">
 
-				<a href="#"> I'm the link to the original site </a>
+	    		<input class="submit_list_page_input" type="text" id="submit_list_items" name="List Item 5">
 
-			</div>
+	    		<input class="submit_list_page_input" type="text" id="submit_list_items" name="List Item 6">
 
-
-			
-
-			<a href="#" class="show_list_items"> Show List Items </a>
-
-			<div class="list_items_container">
-				<div class="list_item"> Item 1 </div>
-
-				<div class="list_item"> Item 2 </div>
-
-				<div class="list_item"> Item 3 </div>
-
-				<div class="list_item"> Item 4 </div>
-
-				<div class="list_item"> Item 5 </div>
-
-				<div class="list_item"> Item 6 </div>
-			</div>
+			</form>
 
 		</div>
-
-
-
-
-		<div class="list_voter_info col_sm_1 col_md_5 col_lg_5">
-
-
-			<div class="list_info desktop_size">
-
-				<form>
-
-					<label for="list_title"> List Title </label>
-		    		<input type="text" id="list_title" name="List Title">
-
-					<label for="list_desc"> List Description </label>
-		    		<input type="textarea" id="list_desc" name="">
-
-		    		<label for="list_url"> Link to List URL </label>
-		    		<input type="text" id="list_url" name="List page URL">
-
-
-				</form>
-
-			</div>
-
-		</div>
-
 
 	</div>
 
@@ -108,11 +78,6 @@
 	<footer>
 		
 	</footer>
-
-
-
-	
-
 
 
   </body>
