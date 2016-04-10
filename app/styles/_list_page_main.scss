@@ -2,6 +2,11 @@
 @import 'variables';
 
 
+.list_page_full_container{
+	display: none;
+}
+
+
 .list_page_container{
 	max-width: $max_container_width;
 	position: relative;
