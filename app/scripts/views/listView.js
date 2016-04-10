@@ -23,7 +23,7 @@ const listView = Backbone.View.extend({
 		return `
 			<div class="list_poster"> <img src="${this.image_ref}"> </div>
 			<h3> ${this.list_title} </h3>
-			<div class="up_vote"> </div>
+			<div class="up_vote"> <i class="fa fa-arrow-up fa-3x"></i> </div>
 			<div class="down_vote"> </div>
 		`
 	},
