@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Webpack!</title>
+    <title>Log in</title>
 
 	<!-- NORMALIZE -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css">
@@ -14,60 +14,68 @@
     <script type="text/javascript" src="bundle.js" charset="utf-8"></script>
 
 
-	<header class="top_header"> 
+	<header> 
 		
 		<div class="head_btn_container col_sm_1 col_md_12 col_lg_12">
 		
 			<a href="#" class="btn user_btn"> </a>
 			
-			<a href="#" class="btn submit_list_btn"> </a>
+			<a href="submit_list_page.html" class="btn submit_list_btn"> </a>
+
+			<a href="#" class="btn ham_btn"> </a>
 
 		</div>
 
 	</header>
+	
+	
+	<div class="login_page_container">
 
+		<div class="create_acc_container col_sm_1 col_md_5 col_lg_5">
 
-	<div class="create_acc_container">
-		
-		<h2> Create an Account </h2>
-
-		<form>
+			<a href="index.html" class="back_home_btn"> Back to Home </a>
 			
-			<label for="email"> Name </label>
-    		<input type="text" id="email" name="Email Address">
+			<h2> Create an Account </h2>
 
-			<label for="username"> Username </label>
-    		<input type="text" id="username" name="Username">
+			<form>
+				
+				<label for="email"> Name </label>
+	    		<input class="login_page_input" type="text" id="email" name="Email Address">
 
-    		<label for="pass"> Password </label>
-    		<input type="text" id="pass" name="Password">
+				<label for="username"> Username </label>
+	    		<input class="login_page_input" type="text" id="username" name="Username">
 
-    		<label for="re-pass"> Retype Password </label>
-    		<input type="text" id="re-pass" name="Retype Password">
+	    		<label for="pass"> Password </label>
+	    		<input class="login_page_input" type="text" id="pass" name="Password">
 
-		</form>
+	    		<label for="re-pass"> Retype Password </label>
+	    		<input class="login_page_input" type="text" id="re-pass" name="Retype Password">
 
-		<a href="#" class="create_acc_submit"> Create Account </a>
+			</form>
 
-	</div>
+			<a href="#" class="create_acc_submit login_page_btn"> Create Account </a>
+
+		</div>
 
 
 
-	<div class="login_container">
-		
-		<h2> Create an Account </h2>
+		<div class="login_container col_sm_1 col_md_5 col_lg_5">
+			
+			<h2> Log in </h2>
 
-		<form>
+			<form>
 
-			<label for="username"> Username </label>
-    		<input type="text" id="username" name="Username">
+				<label for="username"> Username </label>
+	    		<input class="login_page_input" type="text" id="username" name="Username">
 
-    		<label for="pass"> Password </label>
-    		<input type="text" id="pass" name="Password">
+	    		<label for="pass"> Password </label>
+	    		<input class="login_page_input" type="text" id="pass" name="Password">
 
-		</form>
+			</form>
 
-		<a href="#" class="create_acc_submit"> Login </a>
+			<a href="#" class="create_acc_submit login_page_btn"> Login </a>
+
+		</div>
 
 	</div>
 

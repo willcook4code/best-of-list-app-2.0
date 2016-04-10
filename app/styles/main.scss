@@ -2,7 +2,9 @@
 
 @import 'col_grid',
 		'breakpoints',
-		'list_page_main';
+		'list_page_main',
+		'login_page_main',
+		'submit_list_main.scss';
 
 
 
@@ -151,7 +153,7 @@ h3{
 	}
 }
 
-.submit_list_long_btn{
+.submit_long_btn{
 	width: 200px;
 	height: 30px;
 	margin: 0 auto;
