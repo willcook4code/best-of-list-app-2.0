@@ -49,7 +49,6 @@ const listView = Backbone.View.extend({
 		};
 		userVote = $.post('https://wolfpack-lists.herokuapp.com/api/votes', {newVote});
 	}
-
 });
 
 export default listView;
