@@ -142,6 +142,7 @@ h1, h2, h3{
 }
 
 .vote_btn_container{
+	z-index: 1;
 	width: 98%;
 	margin: 0 auto;
 	overflow: hidden;
@@ -179,12 +180,15 @@ h1, h2, h3{
 
 
 h3{
+	padding-bottom: 2.5em;
 	text-align: center;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 
+
 	&:hover{
+		white-space: normal;
 		text-decoration: underline;
 	}
 }
