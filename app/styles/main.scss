@@ -28,13 +28,16 @@ a{
 
 
 .head_btn_container{
+	z-index: 1;
 	width: 100%;
 	max-width: $max_container_width;
 	margin: 0 auto;
 	overflow: hidden;
+	position: relative;
 }
 
 .btn{
+	z-index: 1;
 	float: left;
 	margin-right: 2em;
 	padding: 0.5em 1em;
@@ -43,6 +46,20 @@ a{
 	&:hover{
 		color: $prim_color;
 	}
+}
+
+.user_btn{
+	z-index: 1;
+	position: relative;
+}
+
+.user_dropdown{
+	z-index: 2;
+	padding: 0.5em 1em;
+	background-color: white;
+	color: $dark_accent;
+	position: absolute;
+	top: 100px;
 }
 
 .ham_btn{
@@ -208,12 +225,13 @@ h3{
 	width: 200px;
 	height: 30px;
 	margin: 0 auto;
-	padding: 0.5em 2em 0 2em;
+	padding-top: 0.5em;
 	display: block;
 	background-color: $sec_color;
 	color: white;
 
 	&:hover{
+		cursor: pointer;
 		background-color: darken($sec_color, 10%);
 	}
 }
