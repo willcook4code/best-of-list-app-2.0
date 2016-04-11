@@ -36,6 +36,11 @@
 	padding: 0.5em 1em;
 	background-color: $sec_color;
 	color: white;
+
+	&:hover{
+		cursor: pointer;
+		background-color: darken($sec_color, 10%);
+	}
 }
 
 

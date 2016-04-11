@@ -87,6 +87,8 @@ a{
 
 
 h1{
+	margin: 0 auto;
+	margin-top: 1em;
 	text-align: center;
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 }
@@ -96,10 +98,12 @@ h1, h2, h3{
 }
 
 .mini_h1{
-	font-size: 0.6em;
+	font-size: 2.5em;
+	margin: 0.5em auto;
 }
 
 .home_page_tagline{
+	margin-top: 3em;
 	color: $prim_color;
 }
 
