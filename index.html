@@ -26,7 +26,7 @@
 		
 			<a href="login_page_default.html" class="btn user_btn"> <i class="fa fa-user fa-3x"></i> </a>
 			
-			<a href="submit_list_page.html" class="btn submit_list_btn"> <i class="fa fa-list-ul fa-3x"></i> </a>
+			<a class="btn submit_list_btn"> <i class="fa fa-list-ul fa-3x"></i> </a>
 
 			<a href="#" class="btn ham_btn"> </a>
 
@@ -207,6 +207,59 @@
 
 	</div>
 	<!-- END OF LIST_PAGE_FULL_CONTAINER -->
+<div class="submit_page_full_container">
+	<div class="submit_page_container col_sm_1 col_md_10 col_lg_10">
+
+		<a href="index.html" class="back_home_btn"> Back to Home </a>	
+		
+
+
+		<div class="submit_user_input">		
+
+			<h1> Enter in the List information </h1>
+
+			<form class="submit_page_form">
+
+				<label for="list_title"> List Title </label>
+	    		<input class="submit_list_page_input" type="text" id="list_title" name="List Title">
+
+				<label for="list_desc"> List Description </label>
+	    		<textarea id="list_desc" name=""> </textarea>
+
+	    		<label for="list_url"> Link to List URL </label>
+	    		<input class="submit_list_page_input" type="text" id="list_url" name="List page URL">
+
+
+				<label for="submit_list_items"> Top Items of List </label>
+	    		<input class="submit_list_page_input list_item_1" type="text" class="submit_list_items" placeholder="List Item 1">
+
+	    		<input class="submit_list_page_input list_item_2" type="text" class="submit_list_items" placeholder="List Item 2">
+
+	    		<input class="submit_list_page_input list_item_3" type="text" class="submit_list_items" placeholder="List Item 3">
+
+	    		<input class="submit_list_page_input list_item_4" type="text" class="submit_list_items" placeholder="List Item 4">
+
+	    		<input class="submit_list_page_input list_item_5" type="text" class="submit_list_items" placeholder="List Item 5">
+
+	    		<input class="submit_list_page_input list_item_6" type="text" class="submit_list_items" placeholder="List Item 6">
+
+	    		<input class="submit_list_page_input list_item_7" type="text" class="submit_list_items" placeholder="List Item 7">
+
+	    		<input class="submit_list_page_input list_item_8" type="text" class="submit_list_items" placeholder="List Item 8">
+
+	    		<input class="submit_list_page_input list_item_9" type="text" class="submit_list_items" placeholder="List Item 9">
+
+	    		<input class="submit_list_page_input list_item_10" type="text" class="submit_list_items" placeholder="List Item 10">
+
+			</form>
+			
+			<div class="submit_long_btn submit_list_page_btn"> Submit List </div>
+
+		</div>
+
+	</div>
+</div>
+
 
 	<footer>
 		
@@ -250,6 +303,14 @@
 
 			$('.user_added').show();
 			$('.user_added_tab').addClass('current_tab');
+		});
+		$('.submit_list_btn').click((e) => {
+			$('.home_page_full_container').hide();
+			$('.submit_page_full_container').show();
+		});
+		$('.back_home_btn').click((e) => {
+			$('.home_page_full_container').show();
+			$('.submit_page_full_container').hide();
 		});
 		$('.submit_list_page_btn').click((e) => {
 	       e.preventDefault();
