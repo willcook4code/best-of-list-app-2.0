@@ -13,11 +13,12 @@ const listView = Backbone.View.extend({
         'click .down_vote': 'downVote',
         // 'click .list_poster': 'showList'
     },
-	initialize: function(image_ref, source_ref, list_desc, list_title, id) {
+	initialize: function(image_ref, source_ref, list_desc, list_title, aggregate_votes, id) {
 		this.image_ref = image_ref;
 		this.source_ref = source_ref;
 		this.list_desc = list_desc;
 		this.list_title = list_title;
+		this.aggregate_votes = aggregate_votes;
 		this.id = id;
 		this.render();
 	},
@@ -26,14 +27,15 @@ const listView = Backbone.View.extend({
 			<div class="list_poster"> 
 				<a target="_blank" href="${this.source_ref}"><img class="list_poster_img" src="${this.image_ref}"></a>
 			</div>
-			<h3> <a target="_blank" href="${this.source_ref}">${this.list_title} </h3>
+			<h3>${this.list_title}</h3>
 			<div class="vote_btn_container">
 				<div class="up_vote"> <i class="fa fa-arrow-up fa-3x"></i> </div>
 				<div class="down_vote"> <i class="fa fa-arrow-down fa-3x"></i> </div>
 				<div class="up_vote"> <i class="fa fa-arrow-up fa-2x"></i> </div>
 				<div class="down_vote"> <i class="fa fa-arrow-down fa-2x"></i> </div>
 			</div>
-			<div class="aggro"> </div>
+			<div class="aggro">${this.aggregate_votes}</div>
+			
 		`
 	},
 	render: function() {

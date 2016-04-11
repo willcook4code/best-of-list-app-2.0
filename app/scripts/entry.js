@@ -8,14 +8,13 @@ import userCollection from './collections/userCollection';
 import displayListCollection from './collections/displayListCollection';
 
 
-let newUserSubmission = new listCollection();
-
+let newUserSubmission = new voteCollection();
 
 let topLists = new listCollection();
 var settings = {
 	success: function() {
 		topLists.forEach((list) => {
-			let newListView = new listView(list.get('image_ref'), list.get('source_ref'), list.get('list_desc'), list.get('list_title'), list.get('id'));
+			let newListView = new listView(list.get('image_ref'), list.get('source_ref'), list.get('list_desc'), list.get('list_title'), list.get('aggregate_votes'), list.get('id'));
 			$('.most_rated').append(newListView.el);
 		});
 	}
@@ -26,7 +25,7 @@ let worstLists = new displayListCollection();
 var settings = {
 	success: function() {
 		worstLists.forEach((list) => {
-			let newListView = new listView(list.get('image_ref'), list.get('source_ref'), list.get('list_desc'), list.get('list_title'), list.get('id'));
+			let newListView = new listView(list.get('image_ref'), list.get('source_ref'), list.get('list_desc'), list.get('list_title'), list.get('aggregate_votes'), list.get('id'));
 			$('.least_rated').append(newListView.el);
 		});
 	}
@@ -37,7 +36,7 @@ let newestLists = new userCollection();
 var settings = {
 	success: function() {
 		newestLists.forEach((list) => {
-			let newListView = new listView(list.get('image_ref'), list.get('source_ref'), list.get('list_desc'), list.get('list_title'), list.get('id'));
+			let newListView = new listView(list.get('image_ref'), list.get('source_ref'), list.get('list_desc'), list.get('list_title'), list.get('aggregate_votes'), list.get('id'));
 			$('.user_added').append(newListView.el);
 		});
 	}
