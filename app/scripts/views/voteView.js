@@ -1,8 +1,6 @@
 import Backbone from 'backbone';
 import $ from 'jquery';
 
-
-
 const voteView = Backbone.View.extend({
 	tagName: 'div',
 	className: 'vote',
@@ -19,7 +17,7 @@ const voteView = Backbone.View.extend({
 	},
 	template: function() {
 		return `
-
+			
 		`
 	},
 	render: function() {

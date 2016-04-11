@@ -2,7 +2,7 @@ import Backbone from 'backbone';
 import $ from 'jquery';
 import voteCollection from '../collections/voteCollection';
 import displayListCollection from '../collections/displayListCollection';
-import singleListView from '../views/singleListView';
+// import singleListView from '../views/singleListView';
 import listCollection from '../collections/listCollection';
 
 let userVote = new voteCollection();
@@ -12,7 +12,7 @@ const listView = Backbone.View.extend({
 	events: {
         'click .up_vote': 'upVote',
         'click .down_vote': 'downVote',
-        // 'click .list_poster': 'showList'
+        'click .list_poster': 'showList'
     },
 	initialize: function(image_ref, source_ref, list_desc, list_title, id) {
 		this.image_ref = image_ref;
@@ -51,7 +51,7 @@ const listView = Backbone.View.extend({
 		};
 		userVote = $.post('https://wolfpack-lists.herokuapp.com/api/votes', {newVote});
 	},
-	// showList: function(e) {
+	showList: function(e) {
 	// 	e.preventDefault();
 	// 	let largeViews = new listCollection();
 	// 	var settings = {
@@ -68,8 +68,8 @@ const listView = Backbone.View.extend({
 	// 	};
 	// 	largeViews.fetch(settings);
 		
-	// 	console.log('yo');
-	// }
+		console.log('yo');
+	}
 });
 
 export default listView;

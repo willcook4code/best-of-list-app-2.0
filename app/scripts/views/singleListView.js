@@ -1,5 +1,8 @@
 import Backbone from 'backbone';
 import $ from 'jquery';
+import listCollection from '../collections/listCollection';
+
+let newSubmission = new listCollection();
 
 const singleListView = Backbone.View.extend({
 	className: 'list_page_container',
