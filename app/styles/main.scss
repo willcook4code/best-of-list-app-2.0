@@ -51,9 +51,15 @@ a{
 }
 
 .aggro{
-	width: 95%;
-	margin: 0 auto;
+	width: 50%;
+	margin: 1em auto;
 	padding: 0.5em;
+	text-align: center;
+	background-color: white;
+
+	&:hover{
+		cursor: default;
+	}
 }
 
 

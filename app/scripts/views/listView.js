@@ -34,7 +34,7 @@ const listView = Backbone.View.extend({
 				<div class="up_vote"> <i class="fa fa-arrow-up fa-2x"></i> </div>
 				<div class="down_vote"> <i class="fa fa-arrow-down fa-2x"></i> </div>
 			</div>
-			<div class="aggro">${this.aggregate_votes}</div>
+			<div class="aggro">${this.aggregate_votes} votes </div>
 			
 		`
 	},
