@@ -22,6 +22,10 @@
 		max-width: 400px;
 	}
 
+	.search_bar{
+		display: none;
+	}
+
 	.home_page_message{
 
 		p{
@@ -75,6 +79,17 @@
 		max-width: 305px;
 		margin: 2em auto 8em auto;
 		float: none;
+	}
+
+	.vote_btn_container{
+
+		.up_vote{
+			margin-left: 25%;
+		}
+
+		.down_vote{
+			margin-right: 25%;
+		}
 	}
 
 	.fa-3x{
@@ -208,6 +223,10 @@
 		max-width: $max_container_width;
 	}
 
+	.search_bar{
+		display: block;
+	}
+
 	.mobile_tab_container{
 		display: none;
 	}
@@ -253,20 +272,18 @@
 		.fa-2x{
 			display: inline;
 		}
+
+		.up_vote{
+			margin-left: 0;
+		}
+
+		.down_vote{
+			margin-right: 0;
+		}
 	}
 
 	.up_vote, .down_vote{
 		margin: 0 10%;
-	}
-
-	.up_vote{
-		margin-left: 0;
-		margin-right: 0;
-	}
-
-	.down_vote{
-		margin-right: 0;
-		margin-left: 0;
 	}
 
 
@@ -384,6 +401,14 @@
 
 		.fa-2x{
 			display: none;
+		}
+
+		.up_vote{
+			margin-left: 15%;
+		}
+
+		.down_vote{
+			margin-right: 15%;
 		}
 	}
 

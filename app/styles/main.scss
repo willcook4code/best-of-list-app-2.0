@@ -34,6 +34,12 @@ a{
 	overflow: hidden;
 }
 
+.search_bar{
+	width: 50%;
+	margin-top: 0.5em;
+	padding: 0.5em;
+}
+
 .btn{
 	margin-right: 2em;
 	padding: 0.5em 1em;
@@ -42,6 +48,12 @@ a{
 	&:hover{
 		color: $prim_color;
 	}
+}
+
+.aggro{
+	width: 95%;
+	margin: 0 auto;
+	padding: 0.5em;
 }
 
 
@@ -136,8 +148,8 @@ h1, h2, h3{
 
 .list_poster_img{
 	position: absolute;
-	width: 120%;
-	top: -5%;
+	height: 120%;
+	top: -10%;
 	left: -10%;
 }
 
@@ -167,7 +179,6 @@ h1, h2, h3{
 }
 
 .down_vote{
-	margin-right: 15%;
 	margin-left: 0;
 	float: right;
 	color: $prim_color;
@@ -184,7 +195,9 @@ h3{
 	overflow: hidden;
 	text-overflow: ellipsis;
 
+
 	&:hover{
+		white-space: normal;
 		text-decoration: underline;
 	}
 }
@@ -231,9 +244,6 @@ footer{
 	clear: both;
 };
 
-// .list_poster_image {
-// 	width: 100%;
-// }
 
 input{
 	padding: 0.5em;
