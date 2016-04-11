@@ -3,7 +3,7 @@ import listModel from '../models/listModel';
 
 const displayListCollection = Backbone.Collection.extend({
 	model: listModel,
-	url: 'https://wolfpack-lists.herokuapp.com/api/lists'
+	url: 'https://wolfpack-lists.herokuapp.com/api?specific=least'
 });
 
 export default displayListCollection;
