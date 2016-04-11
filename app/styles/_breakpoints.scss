@@ -12,7 +12,6 @@
 	header{
 		position: fixed;
 		bottom: 0;
-		border-bottom: none;
 	}
 
 	.head_btn_container{
@@ -41,13 +40,6 @@
 		padding: 1.1em 0 1.2em 0.6em;
 	}
 
-
-	.btn{
-		width: 60px;
-		height: 40px; //placeholder
-		background-color: red;
-	}
-
 	.ham_btn{
 		display: block;
 	}
@@ -69,7 +61,7 @@
 	}
 
 	.list_poster{
-		width: 300px;
+		width: 150px;
 		height: 250px;
 	}
 
@@ -81,13 +73,16 @@
 	.voting_container{
 		width: 90%;
 		max-width: 305px;
-		margin: 2em auto 3em auto;
+		margin: 2em auto 8em auto;
 		float: none;
 	}
 
-	.up_vote, .down_vote{
-		width: 130px;
-		margin: 0 3%;
+	.fa-3x{
+		display: inline;
+	}
+
+	.fa-2x{
+		display: none;
 	}
 
 
@@ -162,7 +157,22 @@
 		margin: 8em auto;
 	}
 
+	.login_container{
+		margin-bottom: 8em;
+	}
+
+	.login_page_container{
+		
+		h2{
+			margin-top: 3em;
+		}
+	}
+
 }
+
+
+
+
 
 // LITERALLY JUST FOR USER_ADDED_TAB ONLY
 @media(min-width: 417px){
@@ -175,7 +185,9 @@
 
 
 
-@media(min-width: 600px){
+
+
+@media(min-width: 650px){
 	
 	// CSS PRESETS
 
@@ -185,7 +197,7 @@
 
 	header{
 		position: static;
-		border-bottom: 2px solid black;
+		border-bottom: 2px solid $prim_color;
 	}
 
 	.head_btn_container{
@@ -203,12 +215,6 @@
 			display: block;
 			font-size: 1.5em;
 		}
-	}
-
-	.btn{
-		width: 60px;
-		height: 30px; //placeholder
-		background-color: yellow;
 	}
 
 	.ham_btn{
@@ -232,8 +238,7 @@
 
 
 	.list_poster{
-		width: 100%;
-		min-width: 120px;
+		width: 90px;
 		height: 150px;
 	}
 
@@ -241,28 +246,39 @@
 		width: 15%;
 		margin: 0 2%;
 		float: left;
+
+		.fa-3x{
+			display: none;
+		}
+
+		.fa-2x{
+			display: inline;
+		}
 	}
 
 	.up_vote, .down_vote{
-		width: 40%;
-		margin: 5%;
+		margin: 0 10%;
+	}
+
+	.up_vote{
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.down_vote{
+		margin-right: 0;
+		margin-left: 0;
 	}
 
 
 	.pre_footer_container{
 		display: block;
 	}
-
-	.up_vote, .down_vote{
-		min-width: 40%;
-	}
 	
 
 	footer{
 		display: block;
 	}
-
-
 
 
 
@@ -309,6 +325,8 @@
 		display: block;
 	}
 
+
+
 // SUBMIT LIST PAGE
 	.submit_user_input{
 		margin: 0 auto;
@@ -316,7 +334,19 @@
 		margin-bottom: 3em;
 	}
 
+	.login_container{
+		margin-bottom: 10%;
+	}
+
+	.login_page_container{
+		
+		h2{
+			margin-top: 2em;
+		}
+	}
+
 }
+
 
 
 
@@ -337,15 +367,21 @@
 		}
 	}
 
-	.btn{
-		width: 100px;
-		height: 70px; //placeholder
-		background-color: green;
-	}
-
 
 	.list_poster{
+		width: 180px;
 		height: 250px;
+	}
+	
+	.voting_container{
+		
+		.fa-3x{
+			display: inline;
+		}
+
+		.fa-2x{
+			display: none;
+		}
 	}
 
 }

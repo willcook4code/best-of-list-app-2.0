@@ -10,6 +10,7 @@ import singleListView from './views/singleListView';
 
 let newUserSubmission = new listCollection();
 
+
 let compiledLists = new listCollection();
 var settings = {
 	success: function() {
@@ -20,8 +21,6 @@ var settings = {
 	}
 };
 compiledLists.fetch(settings);
-
-
 
 let largeViews = new listCollection();
 	var settings = {
@@ -35,29 +34,44 @@ let largeViews = new listCollection();
 
 largeViews.fetch(settings);
 
+// let newUserSubmission = new submitFormCollection();
 
-$('.submit_list_page_btn').on('click', function() {
-	let urlString = 'https://wolfpack-lists.herokuapp.com/api/van';
-	let urlConcat = urlString + '?list_title='+ $('#list_title').val() +'$list_desc='+$('#list_desc').val()+'&list_url='+$('#list_url').val()+'&list_winner='+$('.list_item_1').val()+'&item[one]='+$('.list_item_1').val()+'&item[two]='+$('.list_item_2').val()+'&item[three]='+$('.list_item_3').val()+'&item[four]='+$('.list_item_4').val()+'&item[five]='+$('.list_item_5').val()+'&item[six]='+$('.list_item_6').val()+'&item[seven]='+$('.list_item_7').val()+'&item[eight]='+$('.list_item_8').val()+'&item[nine]='+$('.list_item_9').val()+'&item[ten]='+$('.list_item_10').val();
-	let submission = {
-        // list_winner: $('#list_winner').val(),
-		list_title: $('#list_title').val(),
-		list_desc: $('#list_desc').val(),
-		list_url: $('#list_url').val()
-		// one: $('.list_item_1').val(),
-		// two: $('.list_item_2').val(), 
-		// three: $('.list_item_3').val(),
-		// four: $('.list_item_4').val(),
-		// five: $('.list_item_5').val(),
-		// six: $('.list_item_6').val(),
-		// seven: $('.list_item_7').val(), 
-		// eight: $('.list_item_8').val(),
-		// nine: $('.list_item_9').val(),
-		// ten: $('.list_item_10').val()
-    };
-    debugger;
-	$.post(urlConcat);   
-	$('.submit_list_page_input').val('');
-    $('.user_added').append(newListView.el);
-    compiledLists.fetch(settings);
-});
+// $('.submit_long_btn').on('click', e => {
+// 	let submission = {
+
+// 	    list_winner: $('#list_winner').val(),
+// 		list_title: $('#list_title').val(),
+// 		list_desc: $('#list_desc').val(),
+// 		list_url: $('#list_url').val(),
+// 		one: $('.list_item_1').val(),
+// 		two: $('.list_item_2').val(), 
+// 		three: $('.list_item_3').val(),
+// 		four: $('.list_item_4').val(),
+// 		five: $('.list_item_5').val(),
+// 		six: $('.list_item_6').val(),
+// 		seven: $('.list_item_7').val(), 
+// 		eight: $('.list_item_8').val(),
+// 		nine: $('.list_item_9').val(),
+// 		ten: $('.list_item_10').val()
+// 	};
+
+// 	var postSettings = {
+// 		url: 'https://wolfpack-lists.herokuapp.com/api/lists',
+// 		type: 'post',
+// 		data: submission,
+// 		dataType: 'json',
+// 		success: function(data) {
+// 			console.log('I run good');
+// 		},
+// 		error: function(err) {
+// 			console.log('try again');
+// 		},
+// 		complete: function(){
+// 			console.log('I run');
+// 		}
+// 	};
+
+// 	$.ajax(postSettings);
+// });
+
+

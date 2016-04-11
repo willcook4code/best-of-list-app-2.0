@@ -7,6 +7,12 @@
 	<!-- NORMALIZE -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css">
 
+	<!-- GOOGLE FONTS -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed|Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+
+	<!-- FONT AWESOME -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="./style.css" media="screen">
 
   </head>
@@ -18,9 +24,9 @@
 		
 		<div class="head_btn_container col_sm_1 col_md_12 col_lg_12">
 		
-			<a href="login_page_default.html" class="btn user_btn"> </a>
+			<a href="login_page_default.html" class="btn user_btn"> <i class="fa fa-user fa-3x"></i> </a>
 			
-			<a href="submit_list_page.html" class="btn submit_list_btn"> </a>
+			<a href="submit_list_page.html" class="btn submit_list_btn"> <i class="fa fa-list-ul fa-3x"></i> </a>
 
 			<a href="#" class="btn ham_btn"> </a>
 
@@ -31,18 +37,15 @@
 	
 
 	<div class="home_page_full_container">
+
 		<div class="home_page_message col_sm_6 col_md_12 col_lg_12">
 
-			<h1>
-				<span class="mini_h1"> Best of the </span> 
+			<h1> BestFeed </h1>
 
-				<br>
-
-				Best of Lists
-			</h1>
-
-			<p> I'm going to be a tagline one day :) </p>
-
+			<h1 class="mini_h1"> Best of the Best of Lists </h1>
+			
+			<p class="home_page_tagline"> Rate your favorite "Best of" Lists of all time </p>
+			
 		</div>
 
 
@@ -88,7 +91,6 @@
 		</div>
 
 
-
 		<div class="pre_footer_container">
 
 			<p> Don't see a List you want to vote for? </p>
@@ -116,7 +118,7 @@
 				<div class="list_winner_img">	</div>
 
 
-		<a href="submit_list_page.html" class="submit_list_btn submit_long_btn"> Submit a List </a>
+				<a href="submit_list_page.html" class="submit_list_btn submit_long_btn"> Submit a List </a>
 
 				<h2> I'm the winner of this list ;D </h2>
 
@@ -176,8 +178,12 @@
 					<h3> Worst of the Best </h3>
 					<div class="vote_down_stats"> </div>
 
-					<div class="up_vote"> </div>
-					<div class="down_vote"> </div>
+					<div class="vote_btn_container">
+						<div class="up_vote"> <i class="fa fa-arrow-up fa-3x"></i> </div>
+						<div class="down_vote"> <i class="fa fa-arrow-down fa-3x"></i> </div>
+						<div class="up_vote"> <i class="fa fa-arrow-up fa-2x"></i> </div>
+						<div class="down_vote"> <i class="fa fa-arrow-down fa-2x"></i> </div>
+					</div>
 
 				</div>
 

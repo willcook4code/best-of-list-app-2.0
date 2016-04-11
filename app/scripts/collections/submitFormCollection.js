@@ -1,5 +1,5 @@
 import Backbone from 'backbone';
-import submitFormModel from '../models/voteModel';
+import submitFormModel from '../models/listModel';
 
 const submitFormCollection = Backbone.Collection.extend({
 	model: submitFormModel,
