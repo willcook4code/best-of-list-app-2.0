@@ -44,12 +44,8 @@
 		padding: 1.1em 0 1.2em 0.6em;
 	}
 
-	.ham_btn{
-		display: block;
-	}
-
-	.submit_list_btn{
-		display: none;
+	.btn{
+		float: right;
 	}
 
 
@@ -215,6 +211,10 @@
 	.mobile_tab_container{
 		display: none;
 	}
+
+	.btn{
+		float: left;
+	}
 	
 
 	.home_page_message{
@@ -223,16 +223,7 @@
 			display: block;
 			font-size: 1.5em;
 		}
-	}
-
-	.ham_btn{
-		display: none;
-	}
-
-	.submit_list_btn{
-		display: block;
-	}
-	
+	}	
 
 	.least_rated, .user_added{
 		display: block;
