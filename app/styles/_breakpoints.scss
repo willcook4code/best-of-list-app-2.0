@@ -22,6 +22,10 @@
 		max-width: 400px;
 	}
 
+	.search_bar{
+		display: none;
+	}
+
 	.home_page_message{
 
 		p{
@@ -217,6 +221,10 @@
 
 	.head_btn_container{
 		max-width: $max_container_width;
+	}
+
+	.search_bar{
+		display: block;
 	}
 
 	.mobile_tab_container{
