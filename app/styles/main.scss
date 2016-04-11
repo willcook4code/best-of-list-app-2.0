@@ -160,8 +160,12 @@ h1, h2, h3{
 
 .list_poster_img{
 	position: absolute;
-	left: -30px;
 	height: 100%;
+}
+
+// LONG HORIZONTALLY
+.long_img{
+	left: -150px;
 }
 
 .vote_btn_container{
