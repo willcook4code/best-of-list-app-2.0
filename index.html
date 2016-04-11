@@ -206,67 +206,6 @@
 	</div>
 	<!-- END OF LIST_PAGE_FULL_CONTAINER -->
 
-	<div class="submit_page_full_container">
-
-		<div class="submit_page_container col_sm_1 col_md_10 col_lg_10">
-
-		<a href="index.html" class="back_home_btn"> Back to Home </a>	
-		
-
-
-		<div class="submit_user_input">		
-
-			<h1> Enter in the List information </h1>
-
-			<form class="submit_page_form">
-
-				<label for="list_winner"> Winner of List </label>
-				<input class="submit_list_page_input" type="text" id="list_winner" name="Winner of List">
-
-				<label for="list_title"> List Title </label>
-	    		<input class="submit_list_page_input" type="text" id="list_title" name="List Title">
-
-				<label for="list_desc"> List Description </label>
-	    		<textarea id="list_desc" name=""> </textarea>
-
-	    		<label for="list_url"> Link to List URL </label>
-	    		<input class="submit_list_page_input" type="text" id="list_url" name="List page URL">
-
-
-				<label for="submit_list_items"> List Items </label>
-	    		<input class="submit_list_page_input list_item_1" type="text" class="submit_list_items" name="List Item 1">
-
-	    		<input class="submit_list_page_input list_item_2" type="text" class="submit_list_items" name="List Item 2">
-
-	    		<input class="submit_list_page_input list_item_3" type="text" class="submit_list_items" name="List Item 3">
-
-	    		<input class="submit_list_page_input list_item_4" type="text" class="submit_list_items" name="List Item 4">
-
-	    		<input class="submit_list_page_input list_item_5" type="text" class="submit_list_items" name="List Item 5">
-
-	    		<input class="submit_list_page_input list_item_6" type="text" class="submit_list_items" name="List Item 6">
-
-	    		<input class="submit_list_page_input list_item_7" type="text" class="submit_list_items" name="List Item 7">
-
-	    		<input class="submit_list_page_input list_item_8" type="text" class="submit_list_items" name="List Item 8">
-
-	    		<input class="submit_list_page_input list_item_9" type="text" class="submit_list_items" name="List Item 9">
-
-	    		<input class="submit_list_page_input list_item_10" type="text" class="submit_list_items" name="List Item 10">
-
-	    <button type='button' class="user_submit_list">Submit Your List</button>
-
-			</form>
-
-			<button class="submit_long_btn submit_list_page_btn"> Submit List </button>
-
-		</div>
-
-	</div>
-	
-	</div>
-
-
 	<footer>
 		
 	</footer>
@@ -310,31 +249,30 @@
 			$('.user_added').show();
 			$('.user_added_tab').addClass('current_tab');
 		});
-		$('.submit_list_page_btn').on('click', function() {
-		let urlString = 'https://wolfpack-lists.herokuapp.com/api/van';
-		let urlConcat = urlString + '?list_title='+ $('#list_title').val() +'&list_desc='+$('#list_desc').val()+'&source_ref='+$('#list_url').val()+'&user_id=1&item[one]='+$('.list_item_1').val()+'&item[two]='+$('.list_item_2').val()+'&item[three]='+$('.list_item_3').val()+'&item[four]='+$('.list_item_4').val()+'&item[five]='+$('.list_item_5').val()+'&item[six]='+$('.list_item_6').val()+'&item[seven]='+$('.list_item_7').val()+'&item[eight]='+$('.list_item_8').val()+'&item[nine]='+$('.list_item_9').val()+'&item[ten]='+$('.list_item_10').val()+'&image_ref=stuff&source_ref=stuff&list_type=anything';
-		// let submission = {
-	 //        // list_winner: $('#list_winner').val(),
-		// 	list_title: $('#list_title').val(),
-		// 	list_desc: $('#list_desc').val(),
-		// 	list_url: $('#list_url').val()
-		// 	// one: $('.list_item_1').val(),
-		// 	// two: $('.list_item_2').val(), 
-		// 	// three: $('.list_item_3').val(),
-		// 	// four: $('.list_item_4').val(),
-		// 	// five: $('.list_item_5').val(),
-		// 	// six: $('.list_item_6').val(),
-		// 	// seven: $('.list_item_7').val(), 
-		// 	// eight: $('.list_item_8').val(),
-		// 	// nine: $('.list_item_9').val(),
-		// 	// ten: $('.list_item_10').val()
-	 //    };
-	    // debugger;
-		$.get(urlConcat);   
+		$('.submit_list_page_btn').click((e) => {
+	       e.preventDefault();
+	       let list_title = $('#list_title').val();
+	       let image_ref = 'asdf';
+	       let source_ref = $('#list_url').val();
+	       let list_desc = $('#list_desc').val();
+	       let user_id = 1;
+	       let list_type = 'asdf';
+	       let item = {
+		     one: $('.list_item_1').val(),
+		     two: $('.list_item_2').val(),
+		     three: $('.list_item_3').val(),
+		     four: $('.list_item_4').val(),
+		     five: $('.list_item_5').val(),
+		     six: $('.list_item_6').val(),
+		     seven: $('.list_item_7').val(),
+		     eight: $('.list_item_8').val(),
+		     nine: $('.list_item_9').val(),
+		     ten: $('.list_item_10').val()
+		       	};
+	       $.post("https://wolfpack-lists.herokuapp.com/api/lists", 
+	          {list_title: list_title, image_ref: image_ref, source_ref: source_ref, list_desc: list_desc, user_id: user_id, list_type: list_type, item: item});
 	});
-
-
-	});
+});
 
 	</script>
 
