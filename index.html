@@ -37,18 +37,15 @@
 	
 
 	<div class="home_page_full_container">
+
 		<div class="home_page_message col_sm_6 col_md_12 col_lg_12">
 
-			<h1>
-				<span class="mini_h1"> Best of the </span> 
+			<h1> BestFeed </h1>
 
-				<br>
-
-				Best of Lists
-			</h1>
-
-			<p class="home_page_tagline"> I'm going to be a tagline one day :) </p>
-
+			<h1 class="mini_h1"> Best of the Best of Lists </h1>
+			
+			<p class="home_page_tagline"> Rate your favorite "Best of" Lists of all time </p>
+			
 		</div>
 
 
@@ -63,7 +60,6 @@
 		</div>
 
 		<!-- MOST RATED ROW -->
-
 		<div class="list_row most_rated col_sm_1 col_md_12 col_lg_12">
 
 			<h2> Most Rated </h2>
@@ -122,7 +118,7 @@
 				<div class="list_winner_img">	</div>
 
 
-		<a href="submit_list_page.html" class="submit_list_btn submit_long_btn"> Submit a List </a>
+				<a href="submit_list_page.html" class="submit_list_btn submit_long_btn"> Submit a List </a>
 
 				<h2> I'm the winner of this list ;D </h2>
 
@@ -182,8 +178,12 @@
 					<h3> Worst of the Best </h3>
 					<div class="vote_down_stats"> </div>
 
-					<div class="up_vote"> </div>
-					<div class="down_vote"> </div>
+					<div class="vote_btn_container">
+						<div class="up_vote"> <i class="fa fa-arrow-up fa-3x"></i> </div>
+						<div class="down_vote"> <i class="fa fa-arrow-down fa-3x"></i> </div>
+						<div class="up_vote"> <i class="fa fa-arrow-up fa-2x"></i> </div>
+						<div class="down_vote"> <i class="fa fa-arrow-down fa-2x"></i> </div>
+					</div>
 
 				</div>
 
@@ -206,6 +206,65 @@
 	</div>
 	<!-- END OF LIST_PAGE_FULL_CONTAINER -->
 
+	<div class="submit_page_full_container">
+
+		<div class="submit_page_container col_sm_1 col_md_10 col_lg_10">
+
+		<a href="index.html" class="back_home_btn"> Back to Home </a>	
+		
+
+
+		<div class="submit_user_input">		
+
+			<h1> Enter in the List information </h1>
+
+			<form class="submit_page_form">
+
+				<label for="list_winner"> Winner of List </label>
+				<input class="submit_list_page_input" type="text" id="list_winner" name="Winner of List">
+
+				<label for="list_title"> List Title </label>
+	    		<input class="submit_list_page_input" type="text" id="list_title" name="List Title">
+
+				<label for="list_desc"> List Description </label>
+	    		<textarea id="list_desc" name=""> </textarea>
+
+	    		<label for="list_url"> Link to List URL </label>
+	    		<input class="submit_list_page_input" type="text" id="list_url" name="List page URL">
+
+
+				<label for="submit_list_items"> List Items </label>
+	    		<input class="submit_list_page_input list_item_1" type="text" class="submit_list_items" name="List Item 1">
+
+	    		<input class="submit_list_page_input list_item_2" type="text" class="submit_list_items" name="List Item 2">
+
+	    		<input class="submit_list_page_input list_item_3" type="text" class="submit_list_items" name="List Item 3">
+
+	    		<input class="submit_list_page_input list_item_4" type="text" class="submit_list_items" name="List Item 4">
+
+	    		<input class="submit_list_page_input list_item_5" type="text" class="submit_list_items" name="List Item 5">
+
+	    		<input class="submit_list_page_input list_item_6" type="text" class="submit_list_items" name="List Item 6">
+
+	    		<input class="submit_list_page_input list_item_7" type="text" class="submit_list_items" name="List Item 7">
+
+	    		<input class="submit_list_page_input list_item_8" type="text" class="submit_list_items" name="List Item 8">
+
+	    		<input class="submit_list_page_input list_item_9" type="text" class="submit_list_items" name="List Item 9">
+
+	    		<input class="submit_list_page_input list_item_10" type="text" class="submit_list_items" name="List Item 10">
+
+	    <button type='button' class="user_submit_list">Submit Your List</button>
+
+			</form>
+
+			<button class="submit_long_btn submit_list_page_btn"> Submit List </button>
+
+		</div>
+
+	</div>
+	
+	</div>
 
 
 	<footer>
@@ -251,6 +310,28 @@
 			$('.user_added').show();
 			$('.user_added_tab').addClass('current_tab');
 		});
+		$('.submit_list_page_btn').on('click', function() {
+		let urlString = 'https://wolfpack-lists.herokuapp.com/api/van';
+		let urlConcat = urlString + '?list_title='+ $('#list_title').val() +'&list_desc='+$('#list_desc').val()+'&source_ref='+$('#list_url').val()+'&user_id=1&item[one]='+$('.list_item_1').val()+'&item[two]='+$('.list_item_2').val()+'&item[three]='+$('.list_item_3').val()+'&item[four]='+$('.list_item_4').val()+'&item[five]='+$('.list_item_5').val()+'&item[six]='+$('.list_item_6').val()+'&item[seven]='+$('.list_item_7').val()+'&item[eight]='+$('.list_item_8').val()+'&item[nine]='+$('.list_item_9').val()+'&item[ten]='+$('.list_item_10').val()+'&image_ref=stuff&source_ref=stuff&list_type=anything';
+		// let submission = {
+	 //        // list_winner: $('#list_winner').val(),
+		// 	list_title: $('#list_title').val(),
+		// 	list_desc: $('#list_desc').val(),
+		// 	list_url: $('#list_url').val()
+		// 	// one: $('.list_item_1').val(),
+		// 	// two: $('.list_item_2').val(), 
+		// 	// three: $('.list_item_3').val(),
+		// 	// four: $('.list_item_4').val(),
+		// 	// five: $('.list_item_5').val(),
+		// 	// six: $('.list_item_6').val(),
+		// 	// seven: $('.list_item_7').val(), 
+		// 	// eight: $('.list_item_8').val(),
+		// 	// nine: $('.list_item_9').val(),
+		// 	// ten: $('.list_item_10').val()
+	 //    };
+	    // debugger;
+		$.get(urlConcat);   
+	});
 
 
 	});

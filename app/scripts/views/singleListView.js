@@ -5,6 +5,7 @@ import listCollection from '../collections/listCollection';
 let newSubmission = new listCollection();
 
 const singleListView = Backbone.View.extend({
+
     className: 'list_page_container',
     initialize: function(image_ref, source_ref, list_desc, list_title, id, items) {
         this.image_ref = image_ref;
@@ -57,6 +58,5 @@ const singleListView = Backbone.View.extend({
     render: function() {
         this.$el.html(this.template());
     }
-});
 
 export default singleListView;

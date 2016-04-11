@@ -5,7 +5,11 @@ import listView from './views/listView';
 import voteCollection from './collections/voteCollection';
 import voteView from './views/listView';
 import userCollection from './collections/userCollection';
-import submitFormCollection from './collections/submitFormCollection';
+import displayListCollection from './collections/displayListCollection';
+import singleListView from './views/singleListView';
+
+let newUserSubmission = new listCollection();
+
 
 let compiledLists = new listCollection();
 var settings = {
@@ -17,6 +21,18 @@ var settings = {
 	}
 };
 compiledLists.fetch(settings);
+
+let largeViews = new listCollection();
+	var settings = {
+	success: function() {
+		largeViews.forEach((list) => {
+			let newSingleListView = new singleListView(list.get('image_ref'), list.get('source_ref'), list.get('list_desc'), list.get('list_title'), list.get('id'));
+			$('.list_page').append(newSingleListView.el);
+		});
+	}
+};		
+
+largeViews.fetch(settings);
 
 // let newUserSubmission = new submitFormCollection();
 
@@ -58,13 +74,8 @@ compiledLists.fetch(settings);
 // 	$.ajax(postSettings);
 // });
 
-$('user_btn').on("click", function(e) {
-	$(e.target).toggleClass('login_dropdown');
-});
 
-$('submit_list_btn').on("click", function(e) {
-	$(e.target).toggleClass('submit_list_dropdown');
-
+<<<<<<< HEAD
 });
 
 let largeViews = new listCollection();
@@ -78,3 +89,5 @@ let largeViews = new listCollection();
 };        
 
 largeViews.fetch(settings);
+=======
+>>>>>>> e9d8a494465525d9c09e6991b547de936a083bf7
