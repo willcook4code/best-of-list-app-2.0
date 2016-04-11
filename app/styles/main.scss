@@ -136,8 +136,8 @@ h1, h2, h3{
 
 .list_poster_img{
 	position: absolute;
-	width: 120%;
-	top: -5%;
+	height: 120%;
+	top: -10%;
 	left: -10%;
 }
 
@@ -168,7 +168,6 @@ h1, h2, h3{
 }
 
 .down_vote{
-	margin-right: 15%;
 	margin-left: 0;
 	float: right;
 	color: $prim_color;
@@ -235,9 +234,6 @@ footer{
 	clear: both;
 };
 
-// .list_poster_image {
-// 	width: 100%;
-// }
 
 input{
 	padding: 0.5em;
