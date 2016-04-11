@@ -56,23 +56,8 @@ const listView = Backbone.View.extend({
 		userVote = $.post('https://wolfpack-lists.herokuapp.com/api/votes', {newVote});
 	},
 	showList: function(e) {
-	// 	e.preventDefault();
-	// 	let largeViews = new listCollection();
-	// 	var settings = {
-	// 		success: function() {
-	// 			largeViews.forEach((list) => {
-	// 				let newSingleListView = new singleListView(list.get('image_ref'), list.get('source_ref'), list.get('list_desc'), list.get('list_title'), list.get('id'), list.get('items'));
-	// 				console.log(list.id);
-	// 				console.log(list.items);
-	// 				console.log(newSingleListView);
-	// 				$('.list_page').append(newSingleListView.el);
-	// 				// window.location = 'list_page_default.html';
-	// 			});
-	// 		}
-	// 	};
-	// 	largeViews.fetch(settings);
-		
-		console.log('yo');
+			$('.home_page_full_container').hide();
+			$('.list_page_full_container').show();
 	}
 });
 

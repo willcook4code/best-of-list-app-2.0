@@ -22,27 +22,27 @@ var settings = {
 };
 compiledLists.fetch(settings);
 
-let largeViews = new listCollection();
-	var settings = {
-	success: function() {
-		largeViews.forEach((list) => {
-			let newSingleListView = new singleListView(list.get('image_ref'), list.get('source_ref'), list.get('list_desc'), list.get('list_title'), list.get('id'));
-			$('.list_page').append(newSingleListView.el);
-		});
-	}
-};		
-
-largeViews.fetch(settings);
-
 // let largeViews = new listCollection();
-//     var settings = {
-//     success: function() {
-//         largeViews.forEach((list) => {
-//             let newSingleListView = new singleListView(list.get('image_ref'), list.get('source_ref'), list.get('list_desc'), list.get('list_title'), list.get('id'));
-//             $('.list_page').append(newSingleListView.el);
-//         });
-//     }
-// };        
+// 	var settings = {
+// 	success: function() {
+// 		largeViews.forEach((list) => {
+// 			let newSingleListView = new singleListView(list.get('image_ref'), list.get('source_ref'), list.get('list_desc'), list.get('list_title'), list.get('id'));
+// 			$('.list_page').append(newSingleListView.el);
+// 		});
+// 	}
+// };		
 
 // largeViews.fetch(settings);
+
+let largeViews = new listCollection();
+    var settings = {
+    success: function() {
+        largeViews.forEach((list) => {
+            let newSingleListView = new singleListView(list.get('image_ref'), list.get('source_ref'), list.get('list_desc'), list.get('list_title'), list.get('id'));
+            $('.list_page').append(newSingleListView.el);
+        });
+    }
+};        
+
+largeViews.fetch(settings);
 
