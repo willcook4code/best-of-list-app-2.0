@@ -58,11 +58,3 @@ compiledLists.fetch(settings);
 // 	$.ajax(postSettings);
 // });
 
-$('user_btn').on("click", function(e) {
-	$(e.target).toggleClass('login_dropdown');
-});
-
-$('submit_list_btn').on("click", function(e) {
-	$(e.target).toggleClass('submit_list_dropdown');
-
-});

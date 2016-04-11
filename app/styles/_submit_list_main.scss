@@ -20,6 +20,7 @@
 	left: 5%;
 	text-align: center;
 	background-color: $prim_color;
+	color: white;
 
 	&:hover{
 		background-color: darken($prim_color, 10%);

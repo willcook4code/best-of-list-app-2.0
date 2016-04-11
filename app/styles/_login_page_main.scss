@@ -23,6 +23,7 @@
 	left: 5%;
 	text-align: center;
 	background-color: $prim_color;
+	color: white;
 
 	&:hover{
 		background-color: darken($prim_color, 10%);
@@ -35,6 +36,11 @@
 	padding: 0.5em 1em;
 	background-color: $sec_color;
 	color: white;
+
+	&:hover{
+		cursor: pointer;
+		background-color: darken($sec_color, 10%);
+	}
 }
 
 
