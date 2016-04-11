@@ -21,7 +21,7 @@ const singleListView = Backbone.View.extend({
         <a href="index.html" class="back_home_btn"> Back to Home </a>
         <div class="list_winner_container col_sm_1 col_md_5 col_lg_5">    
             <div class="list_winner_img">    </div>
-            <h2> I'm the winner of this list ;D </h2>
+            <h2> And the winner is ${this.items[0.one]} </h2>
             <div class="list_info mobile_size">
                 <h2> ${this.list_title} </h2>
                 <p> ${this.list_desc} </p>
@@ -29,12 +29,16 @@ const singleListView = Backbone.View.extend({
             </div>
             <a href="#" class="show_list_items"> Show List Items </a>
             <div class="list_items_container">
-                <div class="list_item"> Item 1 </div>
-                <div class="list_item"> Item 2 </div>
-                <div class="list_item"> Item 3 </div>
-                <div class="list_item"> Item 4 </div>
-                <div class="list_item"> Item 5 </div>
-                <div class="list_item"> Item 6 </div>
+                <div class="list_item"> ${this.items[0].one} </div>
+                <div class="list_item"> ${this.items[0].two} </div>
+                <div class="list_item"> ${this.items[0].three} </div>
+                <div class="list_item"> ${this.items[0].four} </div>
+                <div class="list_item"> ${this.items[0].five} </div>
+                <div class="list_item"> ${this.items[0].six} </div>
+                <div class="list_item"> ${this.items[0].seven} </div>
+                <div class="list_item"> ${this.items[0].eight} </div>
+                <div class="list_item"> ${this.items[0].nine} </div>
+                <div class="list_item"> ${this.items[0].ten} </div>
             </div>
         </div>
         <div class="list_voter_info col_sm_1 col_md_5 col_lg_5">
@@ -61,11 +65,5 @@ const singleListView = Backbone.View.extend({
 });
 
 export default singleListView;
-
-
-
-
-
-
 
 
