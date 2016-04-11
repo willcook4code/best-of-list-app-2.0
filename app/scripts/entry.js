@@ -75,3 +75,19 @@ largeViews.fetch(settings);
 // });
 
 
+<<<<<<< HEAD
+});
+
+let largeViews = new listCollection();
+    var settings = {
+    success: function() {
+        largeViews.forEach((list) => {
+            let newSingleListView = new singleListView(list.get('image_ref'), list.get('source_ref'), list.get('list_desc'), list.get('list_title'), list.get('id'));
+            $('.list_page').append(newSingleListView.el);
+        });
+    }
+};        
+
+largeViews.fetch(settings);
+=======
+>>>>>>> e9d8a494465525d9c09e6991b547de936a083bf7

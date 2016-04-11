@@ -28,17 +28,13 @@ a{
 
 
 .head_btn_container{
-	z-index: 1;
 	width: 100%;
 	max-width: $max_container_width;
 	margin: 0 auto;
 	overflow: hidden;
-	position: relative;
 }
 
 .btn{
-	z-index: 1;
-	float: left;
 	margin-right: 2em;
 	padding: 0.5em 1em;
 	color: white;
@@ -46,26 +42,6 @@ a{
 	&:hover{
 		color: $prim_color;
 	}
-}
-
-.user_btn{
-	z-index: 1;
-	position: relative;
-}
-
-.user_dropdown{
-	z-index: 2;
-	padding: 0.5em 1em;
-	background-color: white;
-	color: $dark_accent;
-	position: absolute;
-	top: 100px;
-}
-
-.ham_btn{
-	float: right;
-	margin-right: 2em;
-	border: 2px solid black;
 }
 
 
@@ -160,8 +136,9 @@ h1, h2, h3{
 
 .list_poster_img{
 	position: absolute;
-	left: -30px;
-	height: 100%;
+	width: 120%;
+	top: -5%;
+	left: -10%;
 }
 
 .vote_btn_container{
@@ -225,6 +202,13 @@ h3{
 	}
 }
 
+.submit_user_input{
+
+	h1{
+		margin-bottom: 2em;
+	}
+}
+
 .submit_long_btn{
 	width: 200px;
 	height: 30px;
@@ -245,8 +229,15 @@ footer{
 	width: 100%;
 	height: 100px;
 	clear: both;
-}
+};
 
+// .list_poster_image {
+// 	width: 100%;
+// }
+
+input{
+	padding: 0.5em;
+}
 
 
 

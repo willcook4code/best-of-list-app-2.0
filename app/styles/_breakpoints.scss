@@ -9,6 +9,10 @@
 		font-size: 2em;
 	}
 
+	h3{
+		font-size: 1.17em;
+	}
+
 	header{
 		position: fixed;
 		bottom: 0;
@@ -40,12 +44,8 @@
 		padding: 1.1em 0 1.2em 0.6em;
 	}
 
-	.ham_btn{
-		display: block;
-	}
-
-	.submit_list_btn{
-		display: none;
+	.btn{
+		float: right;
 	}
 
 
@@ -195,6 +195,10 @@
 		font-size: 3em;
 	}
 
+	h3{
+		font-size: 1em;
+	}
+
 	header{
 		position: static;
 		border-bottom: 2px solid $prim_color;
@@ -207,6 +211,10 @@
 	.mobile_tab_container{
 		display: none;
 	}
+
+	.btn{
+		float: left;
+	}
 	
 
 	.home_page_message{
@@ -215,16 +223,7 @@
 			display: block;
 			font-size: 1.5em;
 		}
-	}
-
-	.ham_btn{
-		display: none;
-	}
-
-	.submit_list_btn{
-		display: block;
-	}
-	
+	}	
 
 	.least_rated, .user_added{
 		display: block;
@@ -357,6 +356,10 @@
 
 	h1{
 		font-size: 5em;
+	}
+
+	h3{
+		font-size: 1.17em;
 	}
 	
 
