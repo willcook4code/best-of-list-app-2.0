@@ -24,8 +24,10 @@ const listView = Backbone.View.extend({
 	},
 	template: function() {
 		return `
-			<div class="list_poster"> <img class="list_poster_img" src="${this.image_ref}"> </div>
-			<h3> ${this.list_title} </h3>
+			<div class="list_poster"> 
+				<a target="_blank" href="${this.source_ref}"><img class="list_poster_img" src="${this.image_ref}"></a> 
+			</div>
+			<h3> <a target="_blank" href="${this.source_ref}">${this.list_title}</a> </h3>
 			<div class="vote_btn_container">
 				<div class="up_vote"> <i class="fa fa-arrow-up fa-3x"></i> </div>
 				<div class="down_vote"> <i class="fa fa-arrow-down fa-3x"></i> </div>
