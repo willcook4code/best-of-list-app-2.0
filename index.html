@@ -224,7 +224,7 @@
 	    		<input class="submit_list_page_input" type="text" id="list_title" name="List Title">
 
 				<label for="list_desc"> List Description </label>
-	    		<textarea id="list_desc" name=""> </textarea>
+	    		<textarea class="submit_list_page_input" id="list_desc" name=""> </textarea>
 
 	    		<label for="list_url"> Link to List URL </label>
 	    		<input class="submit_list_page_input" type="text" id="list_url" name="List page URL">
@@ -334,6 +334,7 @@
 		       	};
 	       $.post("https://wolfpack-lists.herokuapp.com/api/lists", 
 	          {list_title: list_title, image_ref: image_ref, source_ref: source_ref, list_desc: list_desc, user_id: user_id, list_type: list_type, item: item});
+	       $('.submit_list_page_input').val('');
 		});
 });
 

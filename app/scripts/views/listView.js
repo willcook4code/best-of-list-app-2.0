@@ -3,6 +3,7 @@ import $ from 'jquery';
 import voteCollection from '../collections/voteCollection';
 import displayListCollection from '../collections/displayListCollection';
 import listCollection from '../collections/listCollection';
+import userCollection from '../collections/userCollection';
 
 let userVote = new voteCollection();
 
@@ -27,7 +28,7 @@ const listView = Backbone.View.extend({
 			<div class="list_poster"> 
 				<a target="_blank" href="${this.source_ref}"><img class="list_poster_img" src="${this.image_ref}"></a>
 			</div>
-			<h3>${this.list_title}</h3>
+			<a target="_blank" href="${this.source_ref}"><h3>${this.list_title}</h3></a>
 			<div class="vote_btn_container">
 				<div class="up_vote"> <i class="fa fa-arrow-up fa-3x"></i> </div>
 				<div class="down_vote"> <i class="fa fa-arrow-down fa-3x"></i> </div>
@@ -45,15 +46,6 @@ const listView = Backbone.View.extend({
 		let newVote = {
 			up_vote: 1,
 			down_vote: 0,
-			user_id: 1,
-			list_id: this.id
-		};
-		userVote = $.post('https://wolfpack-lists.herokuapp.com/api/votes', {newVote});
-	},
-	downVote: function() {
-		let newVote = {
-			up_vote: 0,
-			down_vote: 1,
 			user_id: 1,
 			list_id: this.id
 		};
