@@ -28,6 +28,10 @@ a{
 
 
 .head_btn_container{
+	@extend .col_sm_1;
+	@extend .col_md_12;
+	@extend .col_lg_12;
+
 	width: 100%;
 	max-width: $max_container_width;
 	margin: 0 auto;
@@ -64,6 +68,10 @@ a{
 
 
 .home_page_message{
+	@extend .col_sm_6;
+	@extend .col_md_12;
+	@extend .col_lg_12;
+
 	width: 100%;
 	max-width: 1000px;
 	margin: 0 auto;
@@ -124,6 +132,10 @@ h1, h2, h3{
 
 
 .list_row{
+	@extend .col_sm_1;
+	@extend .col_md_12;
+	@extend .col_lg_12;
+
 	width: 100%;
 	margin: 2em 0;
 	padding: 2em;
@@ -210,6 +222,12 @@ h3{
 
 .submit_page_full_container {
 	display: none;
+}
+
+.submit_page_container{
+	@extend .col_sm_1;
+	@extend .col_md_10;
+	@extend .col_lg_10;
 }
 
 

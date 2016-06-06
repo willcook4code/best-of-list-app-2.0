@@ -35,6 +35,10 @@
 }
 
 .list_winner_container, .list_voter_info{
+	@extend .col_sm_1;
+	@extend .col_md_5;
+	@extend .col_lg_5;
+	
 	float: left;
 
 	h2{
