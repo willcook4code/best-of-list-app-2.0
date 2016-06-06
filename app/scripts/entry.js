@@ -6,7 +6,16 @@ import voteCollection from './collections/voteCollection';
 import voteView from './views/listView';
 import userCollection from './collections/userCollection';
 import displayListCollection from './collections/displayListCollection';
+import ReactDOM from 'react-dom';
+import React from 'react';
 
+const Stuff = React.createClass({
+	render: function() {
+		return <div>Hi</div>;
+		}
+	});
+
+ReactDOM.render(<Stuff/>, document.querySelector(".most_rated"));
 
 let newUserSubmission = new voteCollection();
 
@@ -44,8 +53,6 @@ var settings = {
 newestLists.fetch(settings);
 // JANINA'S CODE
 $(document).ready(function(){
-
-
 		$('.most_rated_tab').click(function(){
 			$('.least_rated').hide();
 			$('.least_rated_tab').removeClass('current_tab');
@@ -92,19 +99,19 @@ $(document).ready(function(){
 	       let user_id = 1;
 	       let list_type = 'asdf';
 	       let item = {
-		     one: $('.list_item_1').val(),
-		     two: $('.list_item_2').val(),
-		     three: $('.list_item_3').val(),
-		     four: $('.list_item_4').val(),
-		     five: $('.list_item_5').val(),
-		     six: $('.list_item_6').val(),
-		     seven: $('.list_item_7').val(),
-		     eight: $('.list_item_8').val(),
-		     nine: $('.list_item_9').val(),
-		     ten: $('.list_item_10').val()
-		       	};
+			one: $('.list_item_1').val(),
+			two: $('.list_item_2').val(),
+			three: $('.list_item_3').val(),
+			four: $('.list_item_4').val(),
+			five: $('.list_item_5').val(),
+			six: $('.list_item_6').val(),
+			seven: $('.list_item_7').val(),
+			eight: $('.list_item_8').val(),
+			nine: $('.list_item_9').val(),
+			ten: $('.list_item_10').val()
+		   };
 	       $.post("https://wolfpack-lists.herokuapp.com/api/lists", 
-	          {list_title: list_title, image_ref: image_ref, source_ref: source_ref, list_desc: list_desc, user_id: user_id, list_type: list_type, item: item});
+				{list_title: list_title, image_ref: image_ref, source_ref: source_ref, list_desc: list_desc, user_id: user_id, list_type: list_type, item: item});
 		});
 });
 
