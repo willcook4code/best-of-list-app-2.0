@@ -272,71 +272,71 @@
 	<script type="text/javascript">
 	
 
-	// JANINA'S CODE
-	$(document).ready(function(){
+// 	// JANINA'S CODE
+// 	$(document).ready(function(){
 
-		$('.most_rated_tab').click(function(){
-			$('.least_rated').hide();
-			$('.least_rated_tab').removeClass('current_tab');
-			$('.user_added').hide();
-			$('.user_added_tab').removeClass('current_tab');
+// 		$('.most_rated_tab').click(function(){
+// 			$('.least_rated').hide();
+// 			$('.least_rated_tab').removeClass('current_tab');
+// 			$('.user_added').hide();
+// 			$('.user_added_tab').removeClass('current_tab');
 
-			$('.most_rated').show();
-			$('.most_rated_tab').addClass('current_tab');
-		});
+// 			$('.most_rated').show();
+// 			$('.most_rated_tab').addClass('current_tab');
+// 		});
 
-		$('.least_rated_tab').click(function(){
-			$('.most_rated').hide();
-			$('.most_rated_tab').removeClass('current_tab');
-			$('.user_added').hide();
-			$('.user_added_tab').removeClass('current_tab');
+// 		$('.least_rated_tab').click(function(){
+// 			$('.most_rated').hide();
+// 			$('.most_rated_tab').removeClass('current_tab');
+// 			$('.user_added').hide();
+// 			$('.user_added_tab').removeClass('current_tab');
 
-			$('.least_rated').show();
-			$('.least_rated_tab').addClass('current_tab');
-		});
+// 			$('.least_rated').show();
+// 			$('.least_rated_tab').addClass('current_tab');
+// 		});
 
-		$('.user_added_tab').click(function(){
-			$('.most_rated').hide();
-			$('.most_rated_tab').removeClass('current_tab');
-			$('.least_rated').hide();
-			$('.least_rated_tab').removeClass('current_tab');
+// 		$('.user_added_tab').click(function(){
+// 			$('.most_rated').hide();
+// 			$('.most_rated_tab').removeClass('current_tab');
+// 			$('.least_rated').hide();
+// 			$('.least_rated_tab').removeClass('current_tab');
 
-			$('.user_added').show();
-			$('.user_added_tab').addClass('current_tab');
-		});
-		$('.submit_list_btn').click((e) => {
-			$('.home_page_full_container').hide();
-			$('.submit_page_full_container').show();
-		});
-		$('.back_home_btn').click((e) => {
-			$('.home_page_full_container').show();
-			$('.submit_page_full_container').hide();
-		});
-		$('.submit_list_page_btn').click((e) => {
-	       e.preventDefault();
-	       let list_title = $('#list_title').val();
-	       let image_ref = 'asdf';
-	       let source_ref = $('#list_url').val();
-	       let list_desc = $('#list_desc').val();
-	       let user_id = 1;
-	       let list_type = 'asdf';
-	       let item = {
-		     one: $('.list_item_1').val(),
-		     two: $('.list_item_2').val(),
-		     three: $('.list_item_3').val(),
-		     four: $('.list_item_4').val(),
-		     five: $('.list_item_5').val(),
-		     six: $('.list_item_6').val(),
-		     seven: $('.list_item_7').val(),
-		     eight: $('.list_item_8').val(),
-		     nine: $('.list_item_9').val(),
-		     ten: $('.list_item_10').val()
-		       	};
-	       $.post("https://wolfpack-lists.herokuapp.com/api/lists", 
-	          {list_title: list_title, image_ref: image_ref, source_ref: source_ref, list_desc: list_desc, user_id: user_id, list_type: list_type, item: item});
-	       $('.submit_list_page_input').val('');
-		});
-});
+// 			$('.user_added').show();
+// 			$('.user_added_tab').addClass('current_tab');
+// 		});
+// 		$('.submit_list_btn').click((e) => {
+// 			$('.home_page_full_container').hide();
+// 			$('.submit_page_full_container').show();
+// 		});
+// 		$('.back_home_btn').click((e) => {
+// 			$('.home_page_full_container').show();
+// 			$('.submit_page_full_container').hide();
+// 		});
+// 		$('.submit_list_page_btn').click((e) => {
+// 	       e.preventDefault();
+// 	       let list_title = $('#list_title').val();
+// 	       let image_ref = 'asdf';
+// 	       let source_ref = $('#list_url').val();
+// 	       let list_desc = $('#list_desc').val();
+// 	       let user_id = 1;
+// 	       let list_type = 'asdf';
+// 	       let item = {
+// 		     one: $('.list_item_1').val(),
+// 		     two: $('.list_item_2').val(),
+// 		     three: $('.list_item_3').val(),
+// 		     four: $('.list_item_4').val(),
+// 		     five: $('.list_item_5').val(),
+// 		     six: $('.list_item_6').val(),
+// 		     seven: $('.list_item_7').val(),
+// 		     eight: $('.list_item_8').val(),
+// 		     nine: $('.list_item_9').val(),
+// 		     ten: $('.list_item_10').val()
+// 		       	};
+// 	       $.post("https://wolfpack-lists.herokuapp.com/api/lists", 
+// 	          {list_title: list_title, image_ref: image_ref, source_ref: source_ref, list_desc: list_desc, user_id: user_id, list_type: list_type, item: item});
+// 	       $('.submit_list_page_input').val('');
+// 		});
+// });
 
 	</script>
 

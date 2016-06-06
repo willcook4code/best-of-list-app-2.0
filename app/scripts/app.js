@@ -1,3 +1,3 @@
-export default function() {
-  console.log('The Iron Yard is awesome!')
-}
+// export default function() {
+//   console.log('The Iron Yard is awesome!')
+// }

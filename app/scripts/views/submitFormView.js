@@ -30,8 +30,7 @@ const submitFormView = Backbone.View.extend({
 		list_winner: $('#list_winner').val(),
 		list_title: $('#list_title').val(),
 		list_desc: $('#list_desc').val(),
-		list_url: $('#list_url').val(),
-		console.log("DID THIS FREAKING WORK?")
+		list_url: $('#list_url').val()
 		};
 		newUserSubmission = $.post('https://wolfpack-lists.herokuapp.com/api/lists', {submission});
 	}
