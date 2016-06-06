@@ -156,6 +156,7 @@ h3{
 	margin-top: 1.5em;
 	overflow: hidden;
 	box-sizing: border-box;
+	position: relative;
 
 	&:hover{
 		cursor: pointer;
@@ -167,6 +168,11 @@ h3{
 	box-sizing: border-box;
 	overflow: hidden;
 	position: relative;
+}
+
+.list_title_container{
+	height: 2em;
+	margin-bottom: 2em;
 }
 
 .list_poster_img{
