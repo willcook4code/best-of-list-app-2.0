@@ -54,6 +54,7 @@ export default React.createClass({
 				image_ref = {list.get('image_ref')}
 				list_title = {list.get('list_title')}
 				aggregate_votes = {list.get('aggregate_votes')}
+				id = {list.get('id')}
 				/>
 			);
 		});
@@ -65,10 +66,12 @@ export default React.createClass({
 				image_ref = {list.get('image_ref')}
 				list_title = {list.get('list_title')}
 				aggregate_votes = {list.get('aggregate_votes')}
+				id = {list.get('id')}
 				/>
 			);
 		});
 		const user = this.state.UserCollection.map((list, i, array) => {
+			console.log(list.get('id'));
 			return (
 				<ListRow
 				key = {i}
@@ -76,24 +79,25 @@ export default React.createClass({
 				image_ref = {list.get('image_ref')}
 				list_title = {list.get('list_title')}
 				aggregate_votes = {list.get('aggregate_votes')}
+				id = {list.get('id')}
 				/>
 			);
 		});
 		return 	(
-				<div className="all_rows">
-					<div className="list_row most_rated">
-						<h2> Best Of The Best </h2>
-						{best}
-					</div>
-					<div className="list_row least_rated">
-						<h2> Worst Of The Best </h2>
-						{worst}
-					</div>
-					<div className="list_row user_added">
-						<h2> New From Users </h2>
-						{user}
-					</div>
+			<div className="all_rows">
+				<div className="list_row most_rated">
+					<h2> Best Of The Best </h2>
+					{best}
 				</div>
-				);
+				<div className="list_row least_rated">
+					<h2> Worst Of The Best </h2>
+					{worst}
+				</div>
+				<div className="list_row user_added">
+					<h2> New From Users </h2>
+					{user}
+				</div>
+			</div>
+		);
 	}
 });

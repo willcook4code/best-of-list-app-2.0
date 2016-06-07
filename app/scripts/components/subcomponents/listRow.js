@@ -1,9 +1,35 @@
 import React from 'react';
+import VoteCollection from '../../collections/voteCollection';
+import $ from 'jquery';
 
 export default React.createClass({
+	getInitialState: function() {
+		return {
+			VoteCollection: VoteCollection
+		};
+	},
+	componentDidMount: function() {
+		VoteCollection.fetch();
+		VoteCollection.on('update change', this.updateVoteCollection);
+	},
+	updateVoteCollection: function() {
+		this.setState({
+			VoteCollection: VoteCollection
+		});
+	},
+	upVote: function() {
+		console.log(this.props.id);
+		let newVote = {
+			up_vote: 1,
+			down_vote: 0,
+			user_id: 1,
+			list_id: this.props.id
+		};
+		$.post('https://wolfpack-lists.herokuapp.com/api/votes', {newVote});
+	},
 	render: function() {
 		return (
-		<div className="list_box">
+		<div className="voting_container">
 			<div className="list_poster"> 
 				<a target="_blank" href={this.props.source_ref}><img className="list_poster_img" src={this.props.image_ref}/></a>
 			</div>
@@ -13,9 +39,9 @@ export default React.createClass({
 			</div>
 
 			<div className="vote_btn_container">
-				<div className="up_vote"> <i className="fa fa-arrow-up fa-3x"></i> </div>
+				<div className="up_vote" onClick={this.upVote}> <i className="fa fa-arrow-up fa-3x"></i> </div>
 				<div className="down_vote"> <i className="fa fa-arrow-down fa-3x"></i> </div>
-				<div className="up_vote"> <i className="fa fa-arrow-up fa-2x"></i> </div>
+				<div className="up_vote" onClick={this.upVote}> <i className="fa fa-arrow-up fa-2x"></i> </div>
 				<div className="down_vote"> <i className="fa fa-arrow-down fa-2x"></i> </div>
 			</div>
 			<div className="aggro">{this.props.aggregate_votes} votes </div>
