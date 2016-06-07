@@ -16,10 +16,10 @@ export default React.createClass({
 		}
 	},
 	componentDidMount: function() {
-		ListCollection.on('update', this.updateListCollection);
-		VoteCollection.on('update', this.updateVoteCollection);
-		UserCollection.on('update', this.updateUserCollection);
-		DisplayListCollection.on('update', this.updateDisplayListCollection);
+		ListCollection.on('update change', this.updateListCollection);
+		VoteCollection.on('update change', this.updateVoteCollection);
+		UserCollection.on('update change', this.updateUserCollection);
+		DisplayListCollection.on('update change', this.updateDisplayListCollection);
 		ListCollection.fetch();
 		VoteCollection.fetch();
 		UserCollection.fetch();
@@ -45,6 +45,11 @@ export default React.createClass({
 			DisplayListCollection: DisplayListCollection.models
 		})
 	},
+	runCollection: function() {
+		this.updateUserCollection;
+		this.updateListCollection;
+		this.updateDisplayListCollection
+	},
 	render: function() {
 		const worst = this.state.DisplayListCollection.map((list, i, array) => {
 			return (
@@ -67,11 +72,11 @@ export default React.createClass({
 				list_title = {list.get('list_title')}
 				aggregate_votes = {list.get('aggregate_votes')}
 				id = {list.get('id')}
+				runCollection = {this.runCollection}
 				/>
 			);
 		});
 		const user = this.state.UserCollection.map((list, i, array) => {
-			console.log(list.get('id'));
 			return (
 				<ListRow
 				key = {i}
