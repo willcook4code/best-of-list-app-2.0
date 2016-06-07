@@ -6,4 +6,4 @@ const displayListCollection = Backbone.Collection.extend({
 	url: 'https://wolfpack-lists.herokuapp.com/api?specific=least'
 });
 
-export default displayListCollection;
+export default new displayListCollection();

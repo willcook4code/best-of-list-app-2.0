@@ -6,4 +6,4 @@ const userCollection = Backbone.Collection.extend({
 	url: 'https://wolfpack-lists.herokuapp.com/api?specific=newest'
 });
 
-export default userCollection;
+export default new userCollection();

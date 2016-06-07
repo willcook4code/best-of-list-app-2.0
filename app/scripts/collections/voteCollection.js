@@ -6,4 +6,4 @@ const voteCollection = Backbone.Collection.extend({
 	url: 'https://wolfpack-lists.herokuapp.com/api/votes'
 });
 
-export default voteCollection;
+export default new voteCollection();
