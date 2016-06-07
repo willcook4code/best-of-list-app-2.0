@@ -6,4 +6,4 @@ const submitFormCollection = Backbone.Collection.extend({
 	url: 'https://wolfpack-lists.herokuapp.com/api/lists'
 });
 
-export default submitFormCollection;
+export default new submitFormCollection();
