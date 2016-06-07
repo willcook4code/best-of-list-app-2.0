@@ -4,7 +4,7 @@ import ListCollection from '../collections/listCollection.js';
 import VoteCollection from '../collections/voteCollection.js';
 import UserCollection from '../collections/userCollection.js';
 import DisplayListCollection from '../collections/displayListCollection.js';
-import WorstRow from './subcomponents/worstRow.js';
+import ListRow from './subcomponents/listRow.js';
 
 export default React.createClass({
 	getInitialState: function() {
@@ -19,7 +19,7 @@ export default React.createClass({
 		ListCollection.on('update', this.updateListCollection);
 		VoteCollection.on('update', this.updateVoteCollection);
 		UserCollection.on('update', this.updateUserCollection);
-		DisplayListCollection.on('updateVoteCollection', this.updateDisplayListCollection);
+		DisplayListCollection.on('update', this.updateDisplayListCollection);
 		ListCollection.fetch();
 		VoteCollection.fetch();
 		UserCollection.fetch();
@@ -46,13 +46,31 @@ export default React.createClass({
 		})
 	},
 	render: function() {
-		const worst = this.state.ListCollection.map((list, i, array) => {
-			console.log(list.get('source_ref'));
-			console.log(list.get('image_ref'));
-			console.log(list.get('list_title'));
-			console.log(list.get('aggregate_votes'));
+		const worst = this.state.DisplayListCollection.map((list, i, array) => {
 			return (
-				<WorstRow
+				<ListRow
+				key = {i}
+				source_ref = {list.get('source_ref')}
+				image_ref = {list.get('image_ref')}
+				list_title = {list.get('list_title')}
+				aggregate_votes = {list.get('aggregate_votes')}
+				/>
+			);
+		});
+		const best = this.state.ListCollection.map((list, i, array) => {
+			return (
+				<ListRow
+				key = {i}
+				source_ref = {list.get('source_ref')}
+				image_ref = {list.get('image_ref')}
+				list_title = {list.get('list_title')}
+				aggregate_votes = {list.get('aggregate_votes')}
+				/>
+			);
+		});
+		const user = this.state.UserCollection.map((list, i, array) => {
+			return (
+				<ListRow
 				key = {i}
 				source_ref = {list.get('source_ref')}
 				image_ref = {list.get('image_ref')}
@@ -62,9 +80,19 @@ export default React.createClass({
 			);
 		});
 		return 	(
-				<div class="list_row least_rated">
-					<h2> Worst Of The Best </h2>
-					{worst}
+				<div className="all_rows">
+					<div className="list_row most_rated">
+						<h2> Best Of The Best </h2>
+						{best}
+					</div>
+					<div className="list_row least_rated">
+						<h2> Worst Of The Best </h2>
+						{worst}
+					</div>
+					<div className="list_row user_added">
+						<h2> New From Users </h2>
+						{user}
+					</div>
 				</div>
 				);
 	}

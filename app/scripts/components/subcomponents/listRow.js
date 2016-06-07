@@ -3,7 +3,7 @@ import React from 'react';
 export default React.createClass({
 	render: function() {
 		return (
-		<div>
+		<div className="list_box">
 			<div className="list_poster"> 
 				<a target="_blank" href={this.props.source_ref}><img className="list_poster_img" src={this.props.image_ref}/></a>
 			</div>
